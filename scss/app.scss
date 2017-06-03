@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+
+
+/* variables */
+
+$color-primary: rgb(105, 106, 159); /* medium purple */
+$color-sidebar: rgb(76, 76, 116); /*sidebar */
+$color-top-graph: rgb(173, 175, 229); /* for top graph */
+$color-selected: rgb(134, 204, 144); /*button and selected */
+
+$color-text: rgb(120, 116, 118); /* text and cancel button */
+$color-text-light: rgb(229, 229, 238);  /* color of graph text, contaier and form borders */
+$white: #fff; /*main background and text inside purple areas */
+
+$font-stack-primary: 'Open sans', sans-serif;
