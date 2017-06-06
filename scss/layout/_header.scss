@@ -1,0 +1,91 @@
+.main-header,
+.header-list,
+.profile-div {
+	display: flex;
+}
+
+
+.main-header {
+	background: $color-primary;
+	color: $white;
+	width: 100%; // of .container div
+	height: auto;
+	padding: 1em;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	@media (min-width: $break-m) {
+		padding-left: 2em;
+		padding-right: 2em;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
+
+.logo {
+	margin-top: 0;
+	margin-bottom: .5em;
+	font-weight: normal;
+	font-size: 2rem;
+	&-span {
+		font-weight: 100;
+	}
+	@media ($break-m) {
+		margin-bottom: 0;
+	}
+}
+
+.header-list {
+
+	height: 50px;
+	li {
+		padding: .5em 1em;
+	} 
+
+	li:first-child {
+		margin-right: auto;
+		position: relative; // for bell indicator
+	}
+
+	li:last-child {
+			border-left: 1px solid $color-sidebar; //rule for desktop 
+			p {
+				display: none;
+			}
+		}
+
+	@media (min-width: $break-m) {
+		li:last-child {
+			border-left: 1px solid $color-sidebar; //rule for desktop 
+			p {
+				display: inline-block;
+			}
+		}
+	}
+	
+}
+
+.bell {
+	height: 100%;
+}
+
+.bell-indicator {
+	position: absolute;
+	top: 0;
+	right: 16px;
+	@include roundy(9px);
+	background: $color-selected;
+}
+
+.profile-div {
+	p {
+		margin: 0;
+		align-self: center;
+	}
+}
+
+.profile-pic {
+	@include roundy(35px);
+	margin-right: .5em;
+}

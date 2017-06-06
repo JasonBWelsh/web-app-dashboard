@@ -1,0 +1,17 @@
+// ----------------- mixins 
+
+// center
+@mixin center($w, $h:null) { 
+	width: $w;
+	max-width: $max-width;
+	height: $h;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Rounded elements
+@mixin roundy($dim) {
+	width: $dim;
+	height: $dim;
+	border-radius: 50%;
+}

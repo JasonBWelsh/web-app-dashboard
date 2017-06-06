@@ -1,22 +1,30 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,400');
 
-*,
-*:before,
-*:after {
-	box-sizing: border-box;
-}
+// ========================
+// Partial imports 
+// ==========================
 
+//Utilities 
 
+@import 'utilities/variables',
+        'utilities/mixins',
+        'utilities/functions',
+        'utilities/helpers';
 
-/* variables */
+//Base 
 
-$color-primary: rgb(105, 106, 159); /* medium purple */
-$color-sidebar: rgb(76, 76, 116); /*sidebar */
-$color-top-graph: rgb(173, 175, 229); /* for top graph */
-$color-selected: rgb(134, 204, 144); /*button and selected */
+@import 'base/base',
+		'base/normalize';
 
-$color-text: rgb(120, 116, 118); /* text and cancel button */
-$color-text-light: rgb(229, 229, 238);  /* color of graph text, contaier and form borders */
-$white: #fff; /*main background and text inside purple areas */
+// Layout Styles 
 
-$font-stack-primary: 'Open sans', sans-serif;
+@import 'layout/containers',
+        'layout/header',
+        'layout/main',
+        'layout/nav';
+
+// Component Styles 
+
+@import 'components/buttons',
+        'components/icons',
+        'components/images';
