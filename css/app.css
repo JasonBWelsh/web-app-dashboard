@@ -470,7 +470,7 @@ template {
   font-size: 2rem; }
   .logo-span {
     font-weight: 100; }
-  @media (768px) {
+  @media (min-width: 768px) {
     .logo {
       margin-bottom: 0; } }
 
