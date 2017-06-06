@@ -40,7 +40,8 @@ ol {
 
 a {
   text-decoration: none;
-  color: #fff; }
+  color: #fff;
+  transition: all .4s ease; }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -512,5 +513,28 @@ template {
   height: 35px;
   border-radius: 50%;
   margin-right: .5em; }
+
+.header-link {
+  border-radius: 8px; }
+
+.header-link p {
+  border-radius: 8px;
+  transition: all .4s ease; }
+
+.header-link:hover,
+.header-link:focus,
+.header-link:hover p,
+.header-link:focus p {
+  /* background: $color-sidebar; */
+  border-bottom: 0 none;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+  background: #7273a5; }
+
+.bell {
+  transition: all .8s ease; }
+
+.bell:hover,
+.bell:focus {
+  transform: rotateY(-180deg); }
 
 /*# sourceMappingURL=app.css.map */

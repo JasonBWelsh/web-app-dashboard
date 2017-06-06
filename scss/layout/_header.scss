@@ -89,3 +89,31 @@
 	@include roundy(35px);
 	margin-right: .5em;
 }
+
+.header-link {
+	border-radius: $br;
+} 
+
+.header-link p {
+	border-radius: $br;
+	transition: all .4s ease;
+}
+
+.header-link:hover,
+.header-link:focus,
+.header-link:hover p,
+.header-link:focus p {
+	/* background: $color-sidebar; */
+	border-bottom: 0 none;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+	background: lighten($color-primary, 3%);
+}
+
+.bell {
+	transition: all .8s ease;
+}
+
+.bell:hover,
+.bell:focus {
+	transform: rotateY(-180deg);
+}
