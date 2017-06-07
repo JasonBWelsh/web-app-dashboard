@@ -443,6 +443,18 @@ template {
   margin-left: auto;
   margin-right: auto; }
 
+.flex-wrap {
+  display: flex;
+  flex-direction: column; }
+
+.main-nav {
+  background: #4c4c74; }
+  .main-nav li {
+    padding: 1em; }
+
+.main {
+  background: #tomato; }
+
 .main-header,
 .header-list,
 .profile-div {
