@@ -443,17 +443,25 @@ template {
   margin-left: auto;
   margin-right: auto; }
 
+.flex-wrap,
+.nav-list {
+  display: flex; }
+
 .flex-wrap {
-  display: flex;
   flex-direction: column; }
 
 .main-nav {
   background: #4c4c74; }
-  .main-nav li {
-    padding: 1em; }
 
-.main {
-  background: blue; }
+.nav-list {
+  justify-content: space-around; }
+  .nav-list li {
+    padding: 1em;
+    height: 5em; }
+
+.nav-icon-div {
+  height: 2em;
+  width: 2em; }
 
 .main-header,
 .header-list,

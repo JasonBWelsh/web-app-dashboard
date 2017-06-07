@@ -4,18 +4,32 @@
 	@include center(100%, 100vh);
 }
 
-.flex-wrap {
+.flex-wrap,
+.nav-list {
 	display: flex;
+}
+
+.flex-wrap {
 	flex-direction: column;
 }
 
 .main-nav {
 	background: $color-sidebar;
+}
+
+.nav-list {
+	justify-content: space-around;
 	li {
 		padding: 1em;
+		height: 5em;
 	}
 }
 
+.nav-icon-div {
+	height: 2em;
+	width: 2em;
+}
+
 .main {
-	background: blue;
+	
 }
