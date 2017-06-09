@@ -490,9 +490,7 @@ template {
   background: #606093;
   color: #fff;
   border-radius: .25em;
-  /* width: 17.5em; */
   padding: 1em;
-  /* margin-left: -8.75em; */
   content: attr(data-tip);
   transform: scale(0.6) translateY(-50%);
   transition: all 0.65s cubic-bezier(0.84, -0.18, 0.31, 1.26) 0.2s; }
@@ -510,7 +508,7 @@ template {
   opacity: 1;
   z-index: 100;
   transition-delay: 0s;
-  transform: scale(1) translateY(0); }
+  transform: scale(1) translateY(0) translateX(0); }
 
 .main-header,
 .header-list,
@@ -596,8 +594,9 @@ template {
 .header-link:focus p {
   /* background: $color-sidebar; */
   border-bottom: 0 none;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
-  background: #7273a5; }
+  /* box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+  background: lighten($color-primary, 3%); */
+  color: #c6c6da; }
 
 .bell {
   transition: all .8s ease; }
