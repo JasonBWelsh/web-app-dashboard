@@ -1,6 +1,4 @@
 .container { //wraps whole app
-	/* width: 100%;
-	height: 100vh; */
 	@include center(100%, 100vh);
 }
 
@@ -11,10 +9,16 @@
 
 .flex-wrap {
 	flex-direction: column;
+	@media (min-width: $break-m) {
+		flex-direction: row;
+	}
 }
 
 .main-nav {
 	background: $color-sidebar;
+	@media (min-width: $break-m) {
+		height: 100%;
+	}
 }
 
 .nav-list {
@@ -22,6 +26,15 @@
 	li {
 		padding: 1em;
 		height: 5em;
+		@include flexCenter;
+		transition: all .4s ease;
+		&:hover {
+			background: lighten($color-sidebar, 10%);
+			border-bottom: 1px solid $white;
+		}
+	}
+	@media (min-width: $break-m) {
+		flex-direction: column;
 	}
 }
 
@@ -29,6 +42,48 @@
 	height: 2em;
 	width: 2em;
 }
+
+// Nav tool tips
+
+.tool {
+	cursor: pointer;
+	position: relative;
+}
+
+.tool::after { // hover bubble
+	position: absolute;
+	/* left: 100%; */
+	top: 100%;
+	opacity: 0;
+	z-index: -100;
+	background: lighten($color-sidebar, 10%);
+	color: $white;
+	border-radius: .25em;
+	/* width: 17.5em; */
+	padding: 1em;
+	/* margin-left: -8.75em; */
+	content: attr(data-tip);
+	transform: scale(.6) translateY(-50%);
+	transition: all .65s cubic-bezier(.84, -.18, .31, 1.26) .2s;
+	@media (min-width: $break-m) {
+		left: 100%;
+		bottom: 0;
+		top: 0;
+		border-bottom-left-radius: 0;
+		border-top-left-radius: 0;
+		transform: translateY(0) translateX(-50%);
+	}
+}
+
+.tool:hover::after,
+.tool:focus::after {
+	opacity: 1;
+	z-index: 100;
+	transition-delay: 0s;
+	transform: scale(1) translateY(0);
+}
+
+// End tool tips
 
 .main {
 	
