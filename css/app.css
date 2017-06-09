@@ -439,7 +439,20 @@ template {
   max-width: 1200px;
   height: 100vh;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  position: relative; }
+
+.alert-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 15vh;
+  left: 35%;
+  width: 30%;
+  height: 13em;
+  background: tomato;
+  display: none; }
 
 .flex-wrap,
 .nav-list {
@@ -596,7 +609,7 @@ template {
   border-bottom: 0 none;
   /* box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
   background: lighten($color-primary, 3%); */
-  color: #c6c6da; }
+  color: #e8ff1e; }
 
 .bell {
   transition: all .8s ease; }
