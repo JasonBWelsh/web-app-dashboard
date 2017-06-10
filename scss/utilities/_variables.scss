@@ -11,12 +11,18 @@ $color-text: rgb(120, 116, 118); /* text and cancel button */
 $color-text-light: rgb(229, 229, 238);  /* color of graph text, contaier and form borders */
 $white: #fff; /*main background and text inside purple areas */
 $yellow : #e8ff1e; 
+$dark: #323232;
 
 //fonts
 $font-stack-primary: 'Roboto', sans-serif;
 
+//Text
+
+$t-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+
 //Layout
 $max-width: 1200px;
+$b-shadow: inset 0 0 10px #000000;
 
 //Borders
 $br: 8px;

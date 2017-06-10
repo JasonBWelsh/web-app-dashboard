@@ -10,6 +10,7 @@
   <body>
 
     <div class="container">
+
     	<header class="main-header">
         <a href="#" class="header-link" tabindex="1"><h1 class="logo">Your<span class="logo-span">App&trade;</span></h1></a>
         
@@ -48,12 +49,15 @@
       </header>
 
       <div class="alert-box">
-        <h2>Notifications</h2>
-        <ul>
-          <li>Work out</li>
-          <li>Code</li>
-          <li>Hug your puppies</li>
-        </ul>
+        <div class="alert-wrap"> <!-- for positiong alert content -->
+          <h2>Notifications</h2>
+          <ul>
+            <li>Work out<span class="remove-btn">x</span></li>
+            <li>Code<span class="remove-btn">x</span></li>
+            <li>Hug your puppies<span class="remove-btn">x</span></li>
+          </ul>
+          <div class="button alert-close-btn"><h3>close</h3></div>
+        </div>
       </div><!--/.alert-box-->
 
       <div class="flex-wrap">

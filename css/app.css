@@ -28,6 +28,11 @@ h2 {
 h3 {
   font-size: 1.2em; }
 
+h1,
+h2,
+h3 {
+  margin: 0; }
+
 img {
   max-width: 100%;
   max-height: 100%; }
@@ -443,16 +448,49 @@ template {
   position: relative; }
 
 .alert-box {
+  -webkit-box-shadow: 2px 2px 4px 5px #787476;
+  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow: 2px 2px 4px 5px #787476;
+  /* Firefox 3.5 - 3.6 */
+  box-shadow: 2px 2px 4px 5px #787476;
+  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  position: absolute;
+  top: 36vh;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 80%;
+  background: #323232;
+  color: #fff;
+  border-radius: 8px;
+  display: none;
+  z-index: 10000; }
+  @media (min-width: 768px) {
+    .alert-box {
+      width: 40%; } }
+
+.alert-wrap {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 15vh;
-  left: 35%;
-  width: 30%;
-  height: 13em;
-  background: tomato;
-  display: none; }
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 1em; }
+  .alert-wrap h2 {
+    margin: 0;
+    font-weight: normal; }
+  .alert-wrap ul {
+    margin: 1em 0; }
+  .alert-wrap li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin: .5em 0;
+    padding: .1em .5em;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: calc(8px - 2px); }
 
 .flex-wrap,
 .nav-list {
@@ -506,7 +544,7 @@ template {
   padding: 1em;
   content: attr(data-tip);
   transform: scale(0.6) translateY(-50%);
-  transition: all 0.65s cubic-bezier(0.84, -0.18, 0.31, 1.26) 0.2s; }
+  transition: all 0.6s ease 0.2s; }
   @media (min-width: 768px) {
     .tool::after {
       left: 100%;
@@ -617,5 +655,28 @@ template {
 .bell:hover,
 .bell:focus {
   transform: rotateY(-180deg); }
+
+.button, .remove-btn {
+  color: #fff;
+  text-align: center;
+  padding: .625em 1.25em;
+  border-radius: 8px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); }
+
+.alert-close-btn, .remove-btn {
+  background: #86cc90;
+  transition: all .4s ease; }
+  .alert-close-btn:hover, .remove-btn:hover {
+    background: #46a654; }
+
+.remove-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.3em;
+  height: 1.3em;
+  border-radius: 50%;
+  margin-left: 1em;
+  padding: .3em; }
 
 /*# sourceMappingURL=app.css.map */

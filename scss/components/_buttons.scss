@@ -1,0 +1,25 @@
+
+.button {
+	color: $white;
+	text-align: center;
+	padding: .625em 1.25em;
+	border-radius: $br;
+	text-shadow: $t-shadow;
+}
+
+.alert-close-btn {
+	background: $color-selected;
+	transition: all .4s ease;
+	&:hover {
+		background: darken($color-selected, 20%);
+	}
+}
+
+.remove-btn {
+	@include flexCenter;
+	@extend .button;
+	@extend .alert-close-btn;
+	@include roundy(1.3em);
+	margin-left: 1em;
+	padding: .3em;
+}
