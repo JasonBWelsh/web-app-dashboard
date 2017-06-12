@@ -7,6 +7,13 @@
 	text-shadow: $t-shadow;
 }
 
+.add-notification-btn {
+	padding: .1em .5em;
+	margin: .7em 0 1em;
+	color: $color-selected;
+	background: lighten($dark, 10%);
+}
+
 .alert-close-btn {
 	background: $color-selected;
 	transition: all .4s ease;
@@ -22,4 +29,6 @@
 	@include roundy(1.3em);
 	margin-left: 1em;
 	padding: .3em;
+	cursor: pointer;
 }
+

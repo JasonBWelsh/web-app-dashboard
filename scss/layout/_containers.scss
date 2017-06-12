@@ -15,7 +15,7 @@
 	margin: 0 auto;
 	left: 0;
 	right: 0;
-	width: 80%;
+	width: 90%;
 	background: $dark;
 	color: $white;
 	border-radius: $br;
@@ -49,6 +49,15 @@
 	}
 }
 
+
+.add-list-div {
+	@include flexCenter;
+	flex-direction: column;
+}
+
+.item-text-box {
+	margin-top: .7em;
+}
 
 
 // 

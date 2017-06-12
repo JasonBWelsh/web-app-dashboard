@@ -448,18 +448,15 @@ template {
   position: relative; }
 
 .alert-box {
-  -webkit-box-shadow: 2px 2px 4px 5px #787476;
-  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-  -moz-box-shadow: 2px 2px 4px 5px #787476;
-  /* Firefox 3.5 - 3.6 */
-  box-shadow: 2px 2px 4px 5px #787476;
-  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  -webkit-box-shadow: 4px 4px 5px 0px #323232;
+  -moz-box-shadow: 4px 4px 5px 0px #323232;
+  box-shadow: 4px 4px 5px 0px #323232;
   position: absolute;
   top: 36vh;
   margin: 0 auto;
   left: 0;
   right: 0;
-  width: 80%;
+  width: 90%;
   background: #323232;
   color: #fff;
   border-radius: 8px;
@@ -491,6 +488,15 @@ template {
     padding: .1em .5em;
     background: rgba(255, 255, 255, 0.3);
     border-radius: calc(8px - 2px); }
+
+.add-list-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.item-text-box {
+  margin-top: .7em; }
 
 .flex-wrap,
 .nav-list {
@@ -663,6 +669,12 @@ template {
   border-radius: 8px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); }
 
+.add-notification-btn {
+  padding: .1em .5em;
+  margin: .7em 0 1em;
+  color: #86cc90;
+  background: #4c4c4c; }
+
 .alert-close-btn, .remove-btn {
   background: #86cc90;
   transition: all .4s ease; }
@@ -677,6 +689,7 @@ template {
   height: 1.3em;
   border-radius: 50%;
   margin-left: 1em;
-  padding: .3em; }
+  padding: .3em;
+  cursor: pointer; }
 
 /*# sourceMappingURL=app.css.map */

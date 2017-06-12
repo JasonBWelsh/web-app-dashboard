@@ -38,3 +38,22 @@ alertUL.addEventListener('click', (e) => {
 		alertUL.removeChild(li);
 	}
 });
+
+// Add notifications 
+alertBox.addEventListener('click', (e) => {
+	if (e.target.classList.contains('add-notification-btn')) {
+		let btn = e.target;
+		let input = document.querySelector('.item-text-box');
+		let inputValue = input.value;
+		// removwe button 
+		let rmvBtn = document.createElement('span');
+		rmvBtn.textContent = 'x';
+		rmvBtn.classList.add('remove-btn');
+		//
+		let li = document.createElement('li');
+		li.textContent = inputValue;
+		li.appendChild(rmvBtn);
+		alertUL.appendChild(li);
+		input.value = "";
+	}
+});
