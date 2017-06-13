@@ -21,10 +21,13 @@
 	border-radius: $br;
 	display: none;
 	z-index: 10000;
+	opacity: 1;
+	transition: opacity .5s ease;
 	@media (min-width: $break-m) {
 		width: 40%;
 	}
 }
+
 
 .alert-wrap {
 	@include flexCenter;
@@ -57,6 +60,14 @@
 
 .item-text-box {
 	margin-top: .7em;
+	border-radius: $br;
+	background: lighten($dark, 10%);
+	transition: all .4s ease;
+}
+
+.item-text-box:focus {
+	background: lighten($dark, 20%);
+	color: $white;
 }
 
 
@@ -64,7 +75,7 @@
 
 .flex-wrap,
 .nav-list {
-	display: flex;
+	@include flexy;
 }
 
 .flex-wrap {
@@ -102,7 +113,6 @@
 	height: 2em;
 	width: 2em;
 }
-
 
 // Nav tool tips
 
@@ -145,5 +155,20 @@
 // End tool tips
 
 .main {
-	
+	@include flexy;
+	flex-direction: column;
+	align-items: center;
+	border: 1px solid tomato;
+	@media (min-width: $break-m) {
+		flex: 1 90%;
+	}
+	h2 {
+		padding: 1em;
+	}
+}
+
+input[type="text"] {
+	border-radius: $br;
+	border: 1px solid $color-text-light;
+	padding: .3em;
 }

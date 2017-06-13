@@ -15,6 +15,9 @@
 	align-items: center;
 }
 
+@mixin flexy () {
+	display: flex;
+}
 
 // Rounded elements
 @mixin roundy($dim) {

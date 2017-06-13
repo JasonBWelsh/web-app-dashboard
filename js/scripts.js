@@ -7,16 +7,29 @@ const alertBox = document.querySelector('.alert-box');
 const alertUL = alertBox.querySelector('ul');
 const alertCloseBtn = alertBox.querySelector('.alert-close-btn');
 
-// Check if notifications are present and display alert box if so
-bellLI.addEventListener('click', (e) => {                     
+
+function toggleAlertBox() {
+	if (alertBox.style.display === 'inline-block') {
+		alertBox.style.display = 'none';
+	} else {
+		alertBox.style.display = 'inline-block';
+	}
+}
+
+function checkNotificationIcon() {
 	if (bellLI.classList.contains('notifications-ready')) {
 		bellLI.classList.remove('notifications-ready');
-		alertBox.style.display = 'inline-block';
 		indicator.style.display = 'none';
 	} else {
 		bellLI.classList.add('notifications-ready');
-		alertBox.style.display = 'none';
 	}
+}
+
+// Check if notifications are present and display alert box if so
+bellLI.addEventListener('click', (e) => { 
+	toggleAlertBox();
+	checkNotificationIcon();
+	
 });
 
 // click close button to close alert
@@ -24,11 +37,13 @@ alertCloseBtn.addEventListener('click', () => {
 	alertBox.style.display = 'none';
 });
 
-/*body.addEventListener('click', () => {      // click anywhere on body to remove alert box
-	if (alertBox.style.display !== 'none') {
+//click anywhere outside of alert box to close
+/*body.addEventListener('click', () => {
+	if (alertBox.style.display === 'inline-block') {
 		alertBox.style.display = 'none';
 	}
 });*/
+
 
 // remove alert LI buttons
 alertUL.addEventListener('click', (e) => {

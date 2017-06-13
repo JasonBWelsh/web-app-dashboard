@@ -1,7 +1,7 @@
 .main-header,
 .header-list,
 .profile-div {
-	display: flex;
+	@include flexy;
 }
 
 
@@ -111,10 +111,10 @@
 }
 
 .bell {
-	transition: all .8s ease;
+	transition: all .4s ease;
 }
 
 .bell:hover,
 .bell:focus {
-	transform: rotateY(-180deg);
+	transform: scale(1.2);/* rotateY(-180deg) */;
 }
