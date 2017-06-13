@@ -635,6 +635,31 @@ template {
 .mag-glass-icon {
   fill: #696a9f; }
 
+.main-alert {
+  position: relative;
+  background: #696a9f;
+  color: #fff;
+  border-radius: 8px;
+  margin: .5em auto;
+  padding: .5em;
+  max-width: 90%; }
+  @media (min-width: break-m) {
+    .main-alert {
+      display: flex; } }
+  .main-alert h3 {
+    font-weight: bold; }
+    @media (min-width: 768px) {
+      .main-alert h3 {
+        display: inline-block; } }
+  @media (min-width: 768px) {
+    .main-alert p {
+      display: inline-block;
+      margin-right: 7%; } }
+  .main-alert .remove-btn {
+    position: absolute;
+    top: .5em;
+    right: .5em; }
+
 .main-header,
 .header-list,
 .profile-div {

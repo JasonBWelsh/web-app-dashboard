@@ -6,6 +6,7 @@ const indicator = bellLI.querySelector('.bell-indicator');
 const alertBox = document.querySelector('.alert-box');
 const alertUL = alertBox.querySelector('ul');
 const alertCloseBtn = alertBox.querySelector('.alert-close-btn');
+const mainAlert = document.querySelector('.main-alert');
 
 
 function toggleAlertBox() {
@@ -68,4 +69,11 @@ alertUL.addEventListener('click', (e) => {
 // Add notifications 
 alertBox.addEventListener('click', (e) => {
 	addNotification(e);
+});
+
+// close main body alert box
+mainAlert.addEventListener('click', (e) => {
+	if (e.target.classList.contains('remove-btn')) {
+		mainAlert.style.display = 'none';
+	}
 });
