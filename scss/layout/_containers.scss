@@ -131,7 +131,7 @@
 	padding: 1em;
 	content: attr(data-tip);
 	transform: scale(.6) translateY(-50%);
-	transition: all .6s ease/* cubic-bezier(.84, -.18, .31, 1.26) */ .2s;
+	transition: all .4s ease/* cubic-bezier(.84, -.18, .31, 1.26) */ .2s;
 	@media (min-width: $break-m) {
 		left: 100%;
 		bottom: 0;
@@ -220,9 +220,11 @@
 	border-radius: $br;
 	margin: .5em auto;
 	padding: .5em;
+	width: 80%;
 	max-width: 90%;
-	@media (min-width: break-m) {
-		@include flexy;
+	@media (min-width: $break-m) {
+		/* @include flexy; */
+		padding: 1em;
 	}
 	h3 {
 		font-weight: bold;
@@ -233,12 +235,13 @@
 	p {
 		@media (min-width: $break-m) {
 			display: inline-block;
-			margin-right: 7%;
+			margin-right: 4%;
 		}
 	}
 	.remove-btn {
 		position: absolute;
 		top: .5em;
 		right: .5em;
+		margin-left: 0;
 	}
 }

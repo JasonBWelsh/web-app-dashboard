@@ -563,7 +563,7 @@ template {
   padding: 1em;
   content: attr(data-tip);
   transform: scale(0.6) translateY(-50%);
-  transition: all 0.6s ease 0.2s; }
+  transition: all 0.4s ease 0.2s; }
   @media (min-width: 768px) {
     .tool::after {
       left: 100%;
@@ -642,10 +642,12 @@ template {
   border-radius: 8px;
   margin: .5em auto;
   padding: .5em;
+  width: 80%;
   max-width: 90%; }
-  @media (min-width: break-m) {
+  @media (min-width: 768px) {
     .main-alert {
-      display: flex; } }
+      /* @include flexy; */
+      padding: 1em; } }
   .main-alert h3 {
     font-weight: bold; }
     @media (min-width: 768px) {
@@ -654,11 +656,12 @@ template {
   @media (min-width: 768px) {
     .main-alert p {
       display: inline-block;
-      margin-right: 7%; } }
+      margin-right: 4%; } }
   .main-alert .remove-btn {
     position: absolute;
     top: .5em;
-    right: .5em; }
+    right: .5em;
+    margin-left: 0; }
 
 .main-header,
 .header-list,
