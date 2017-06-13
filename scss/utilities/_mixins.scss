@@ -9,6 +9,7 @@
 	margin-right: auto;
 }
 
+// flexbox mixins
 @mixin flexCenter () {
 	display: flex;
 	justify-content: center;
@@ -17,6 +18,27 @@
 
 @mixin flexy () {
 	display: flex;
+}
+
+@mixin flexColumn () {
+	flex-direction: column;
+}
+
+@mixin flexRow () {
+	flex-direction: row;
+}
+
+@mixin flexJustifyContent ($just-cnt) {
+	justify-content: $just-cnt;
+}
+
+//absolute position 
+@mixin absolute-positioning($top: null, $right: null, $bottom: null, $left: null) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
 }
 
 // Rounded elements
