@@ -9,7 +9,6 @@
 	background: $color-primary;
 	color: $white;
 	width: 100%; // of .container div
-	/* height: auto; */
 	padding: 1em;
 	flex-direction: column;
 	justify-content: center;
@@ -75,7 +74,7 @@
 	top: 0;
 	right: 16px;
 	@include roundy(9px);
-	background: $color-selected;
+	background: $aqua-blue/* $color-selected */;
 }
 
 .profile-div {
@@ -103,11 +102,8 @@
 .header-link:focus,
 .header-link:hover p,
 .header-link:focus p {
-	/* background: $color-sidebar; */
 	border-bottom: 0 none;
-	/* box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
-	background: lighten($color-primary, 3%); */
-	color: $yellow;
+	color: $aqua-blue;
 }
 
 .bell {

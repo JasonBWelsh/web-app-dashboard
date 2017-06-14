@@ -448,7 +448,8 @@ template {
   height: 100vh;
   margin-left: auto;
   margin-right: auto;
-  position: relative; }
+  position: relative;
+  height: 100vh; }
 
 .alert-box {
   -webkit-box-shadow: 4px 4px 5px 0px #323232;
@@ -516,7 +517,8 @@ template {
   display: flex; }
 
 .flex-wrap {
-  flex-direction: column; }
+  flex-direction: column;
+  height: 100%; }
   @media (min-width: 768px) {
     .flex-wrap {
       flex-direction: row; } }
@@ -583,7 +585,8 @@ template {
 .main {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  position: relative; }
   @media (min-width: 768px) {
     .main {
       flex: 1 90%; } }
@@ -621,6 +624,7 @@ template {
   background: url(../icons/magnifying-glass.svg) no-repeat;
   background-position: 95% 50%;
   background-size: 7%;
+  color: #42d4f4;
   transition: all .4s ease; }
   @media (min-width: 768px) {
     .search {
@@ -632,11 +636,13 @@ template {
         width: 50%;
         color: #696a9f; } }
 
-.mag-glass-icon {
-  fill: #696a9f; }
-
 .main-alert {
+  -webkit-box-shadow: 4px 4px 5px 0px #323232;
+  -moz-box-shadow: 4px 4px 5px 0px #323232;
+  box-shadow: 4px 4px 5px 0px #323232;
   position: relative;
+  position: absolute;
+  top: 10vh;
   background: #696a9f;
   color: #fff;
   border-radius: 8px;
@@ -646,7 +652,7 @@ template {
   max-width: 90%; }
   @media (min-width: 768px) {
     .main-alert {
-      /* @include flexy; */
+      width: 80%;
       padding: 1em; } }
   .main-alert h3 {
     font-weight: bold; }
@@ -656,12 +662,22 @@ template {
   @media (min-width: 768px) {
     .main-alert p {
       display: inline-block;
-      margin-right: 4%; } }
+      margin-right: 1%; } }
   .main-alert .remove-btn {
     position: absolute;
     top: .5em;
     right: .5em;
-    margin-left: 0; }
+    margin-left: 0;
+    transition: all .4s ease; }
+  .main-alert:hover .remove-btn {
+    transform: scale(1.3);
+    border: 1px solid #fff; }
+
+.traffic {
+  height: 30%;
+  width: 100%;
+  margin: 3em auto;
+  border: 1px solid #e5e5ee; }
 
 .main-header,
 .header-list,
@@ -672,7 +688,6 @@ template {
   background: #696a9f;
   color: #fff;
   width: 100%;
-  /* height: auto; */
   padding: 1em;
   flex-direction: column;
   justify-content: center;
@@ -722,7 +737,7 @@ template {
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  background: #86cc90; }
+  background: #42d4f4; }
 
 .profile-div p {
   margin: 0;
@@ -745,11 +760,8 @@ template {
 .header-link:focus,
 .header-link:hover p,
 .header-link:focus p {
-  /* background: $color-sidebar; */
   border-bottom: 0 none;
-  /* box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
-  background: lighten($color-primary, 3%); */
-  color: #e8ff1e; }
+  color: #42d4f4; }
 
 .bell {
   transition: all .4s ease; }
@@ -769,14 +781,15 @@ template {
 .add-notification-btn {
   padding: .1em .5em;
   margin: .7em 0 1em;
-  color: #86cc90;
+  color: #42d4f4;
   background: #4c4c4c; }
 
 .alert-close-btn, .remove-btn {
-  background: #86cc90;
+  background: #42d4f4;
+  /* $color-selected; */
   transition: all .4s ease; }
   .alert-close-btn:hover, .remove-btn:hover {
-    background: #46a654; }
+    background: #0ba3c5; }
 
 .remove-btn {
   display: flex;
