@@ -518,7 +518,7 @@ template {
 
 .flex-wrap {
   flex-direction: column;
-  height: 100%; }
+  /* height: 100%; */ }
   @media (min-width: 768px) {
     .flex-wrap {
       flex-direction: row; } }
@@ -527,7 +527,7 @@ template {
   background: #4c4c74; }
   @media (min-width: 768px) {
     .main-nav {
-      height: 100%; } }
+      /* align-self: stretch; */ } }
 
 .nav-list {
   justify-content: space-around; }
@@ -589,9 +589,12 @@ template {
   position: relative; }
   @media (min-width: 768px) {
     .main {
+      flex-direction: row;
+      flex-wrap: wrap;
       flex: 1 90%; } }
   .main h2 {
-    padding: 1em; }
+    padding: 1em;
+    color: #42d4f4; }
 
 .main-top {
   display: flex;
@@ -624,17 +627,19 @@ template {
   background: url(../icons/magnifying-glass.svg) no-repeat;
   background-position: 95% 50%;
   background-size: 7%;
+  background-color: #fff;
   color: #42d4f4;
   transition: all .4s ease; }
   @media (min-width: 768px) {
     .search {
       width: 30%; } }
   .search:focus {
-    background: #e5e5ee; }
+    background-color: #72dff7;
+    border-color: #fff;
+    color: #fff; }
     @media (min-width: 768px) {
       .search:focus {
-        width: 50%;
-        color: #696a9f; } }
+        width: 40%; } }
 
 .main-alert {
   -webkit-box-shadow: 4px 4px 5px 0px #323232;
@@ -653,7 +658,8 @@ template {
   @media (min-width: 768px) {
     .main-alert {
       width: 80%;
-      padding: 1em; } }
+      padding: 1em;
+      right: 10%; } }
   .main-alert h3 {
     font-weight: bold; }
     @media (min-width: 768px) {
@@ -673,11 +679,51 @@ template {
     transform: scale(1.3);
     border: 1px solid #fff; }
 
-.traffic {
-  height: 30%;
+.widget {
+  padding: 1.5em;
   width: 100%;
-  margin: 3em auto;
-  border: 1px solid #e5e5ee; }
+  border: 1px solid #e5e5ee;
+  border-bottom: none; }
+  @media (min-width: 768px) {
+    .widget {
+      border: none; } }
+
+.traffic {
+  border-top: none;
+  width: 100%;
+  margin: 0 auto; }
+
+@media (min-width: 768px) {
+  .daily-traffic,
+  .mobile-users,
+  .new-members,
+  .recent-activity,
+  .message-user,
+  .settings {
+    flex: 1 50%;
+    border: 1px solid #e5e5ee; } }
+
+@media (min-width: 768px) {
+  .daily-traffic,
+  .mobile-users,
+  .recent-activity,
+  .new-members,
+  .message-user,
+  .settings {
+    border-left: none; } }
+
+@media (min-width: 768px) {
+  .mobile-users,
+  .recent-activity,
+  .settings {
+    border-right: none; } }
+
+@media (min-width: 768px) {
+  .new-members,
+  .recent-activity,
+  .message-user,
+  .settings {
+    border-bottom: none; } }
 
 .main-header,
 .header-list,

@@ -79,7 +79,7 @@
 
 .flex-wrap {
 	@include flexColumn;
-	height: 100%;
+	/* height: 100%; */
 	@media (min-width: $break-m) {
 		flex-direction: row;
 	}
@@ -88,7 +88,7 @@
 .main-nav {
 	background: $color-sidebar;
 	@media (min-width: $break-m) {
-		height: 100%;
+		/* align-self: stretch; */
 	}
 }
 
@@ -160,10 +160,13 @@
 	align-items: center;
 	position: relative;
 	@media (min-width: $break-m) {
+		flex-direction: row;
+		flex-wrap: wrap;
 		flex: 1 90%;
 	}
 	h2 {
 		padding: 1em;
+		color: $aqua-blue;
 	}
 }
 
@@ -199,16 +202,18 @@
 	background: url(../icons/magnifying-glass.svg) no-repeat;
 	background-position: 95% 50%;
 	background-size: 7%;
+	background-color: $white;
 	color: $aqua-blue;
 	transition: all .4s ease;
 	@media (min-width: $break-m) {
 		width: 30%;
 	}
 	&:focus {
-		background: $color-text-light;
+		background-color: lighten($aqua-blue, 10%);
+		border-color: $white;
+		color: $white;
 		@media (min-width: $break-m) {
-			width: 50%;
-			color: $color-primary;
+			width: 40%;
 		}
 	}
 }
@@ -230,6 +235,7 @@
 	@media (min-width: $break-m) {
 		width: 80%;
 		padding: 1em;
+		right: 10%;
 	}
 	h3 {
 		font-weight: bold;
@@ -256,9 +262,58 @@
 	}
 }
 
-.traffic {
-	height: 30%;
+.widget {
+	padding: 1.5em;
 	width: 100%;
-	margin: 3em auto;
-	border: 1px solid $color-text-light;
+	@include mainBorder($color-text-light);
+	border-bottom: none;
+	@media(min-width: $break-m) {
+		border: none;
+	}
+}
+
+.traffic {
+	border-top: none;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.daily-traffic,
+.mobile-users,
+.new-members,
+.recent-activity,
+.message-user,
+.settings {
+	@media(min-width: $break-m) {
+		flex: 1 50%;
+		@include mainBorder($color-text-light);
+	}
+}
+
+.daily-traffic,
+.mobile-users,
+.recent-activity,
+.new-members,
+.message-user,
+.settings {
+	@media(min-width: $break-m) {
+		border-left: none;
+	}
+}
+
+.mobile-users,
+.recent-activity,
+.settings {
+	@media(min-width: $break-m) {
+		border-right: none;
+	}
+}
+
+.new-members,
+.recent-activity,
+.message-user,
+.settings {
+	@media(min-width: $break-m) {
+		border-bottom: none;
+	}
 }
