@@ -77,3 +77,36 @@ mainAlert.addEventListener('click', (e) => {
 		mainAlert.style.display = 'none';
 	}
 });
+
+//============================
+//Charts
+//============================
+const weeklyTraffic = document.getElementById('weekly-traffic');
+let lineChart = new Chart(weeklyTraffic, {
+	type: 'line',
+	data: {
+		labels: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+		datasets: [
+			{
+				label: "Weekly Traffic",
+				fill: true,
+				lineTension: 0.5,
+				backgroundColor: "rgba(75,192,192,0.4)",
+				borderColor: "rgba(75,192,192,1)",
+				borderCapStyle: 'butt',
+				borderDash: [],
+				borderDashOffset: 0.0,
+				borderJoinStyle: 'miter',
+				pointBorderColor: "#fff",
+				pointBorderWidth: 1,
+				pointHoverRadius: 5,
+				pointHoverBackgroundColor: "rgba(75,192,192,1)",
+				pointHoverBorderColor: "rgba(220,220,220,1)",
+				pointHoverBorderWidth: 2,
+				pointRadius: 7,
+				pointHitRadius: 10,
+				data: [65,59,80,81,56,55,40]
+			}
+		]
+	}
+});

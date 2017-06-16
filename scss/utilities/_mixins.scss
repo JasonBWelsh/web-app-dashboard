@@ -61,3 +61,8 @@
 @mixin mainBorder($color) {
 	border: 1px solid $color;
 }
+
+// transitions
+@mixin transStd () {
+	transition: all .4s ease;
+}

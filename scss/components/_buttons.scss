@@ -8,10 +8,16 @@
 }
 
 .add-notification-btn {
+	@include mainBorder($white);
+	@include transStd;
 	padding: .1em .5em;
-	margin: .7em 0 1em;
-	color: $aqua-blue/* $color-selected */;
-	background: lighten($dark, 10%);
+	margin-top: .7em;
+	color: $white;
+	background: lighten($dark, 20%);
+	&:hover {
+		color: $aqua-blue;
+		border-color: $aqua-blue;
+	}
 }
 
 .alert-close-btn {
