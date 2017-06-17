@@ -1,4 +1,3 @@
-
 // Bell Alert
 const body = document.querySelector('body');
 const bellLI = document.querySelector('.header-list li:first-child');
@@ -105,8 +104,9 @@ let lineChart = new Chart(weeklyTraffic, {
 				pointHoverBorderWidth: 2,
 				pointRadius: 7,
 				pointHitRadius: 10,
-				data: [65,59,80,81,56,55,40]
+				data: [33,59,78,63,69,55,40]
 			}
 		]
 	}
 });
+

@@ -12,6 +12,7 @@
 .alert-box {
 	@include b-shadow;
 	@include absolute-positioning(36vh, 0, $left: 0);
+	@include mainBorder($aqua-blue);
 	margin: 0 auto;
 	width: 90%;
 	background: $dark;
@@ -19,7 +20,7 @@
 	border-radius: $br;
 	display: none;
 	z-index: 10000;
-	opacity: 1;
+	opacity: .97;
 	transition: opacity .5s ease;
 	@media (min-width: $break-m) {
 		width: 40%;
@@ -244,6 +245,8 @@
 	padding: .5em;
 	width: 80%;
 	max-width: 90%;
+	z-index: 1000;
+	opacity: .9;
 	@media (min-width: $break-m) {
 		width: 80%;
 		padding: 1em;
@@ -274,9 +277,13 @@
 	}
 }
 
+//Main section layout
+
 .widget {
+	position: relative; // to position iframe and canvas for chart
 	padding: 1.5em;
 	width: 100%;
+	height: auto;
 	@include mainBorder($color-text-light);
 	border-bottom: none;
 	@media(min-width: $break-m) {
@@ -284,9 +291,11 @@
 	}
 }
 
+
 .traffic {
 	border-top: none;
 	width: 100%;
+	height: auto;
 	margin: 0 auto;
 }
 
@@ -329,3 +338,18 @@
 		border-bottom: none;
 	}
 }
+
+
+
+//troubleshoot
+/* .traffic {
+	border: 1px solid green;
+}
+canvas {
+	border: 1px solid red;
+}
+
+iframe {
+	border: 1px solid blue !important;
+} */
+//

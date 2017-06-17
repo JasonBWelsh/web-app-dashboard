@@ -21,6 +21,7 @@
 }
 
 .alert-close-btn {
+	@include mainBorder($white);
 	background: $aqua-blue;/* $color-selected; */
 	transition: all .4s ease;
 	&:hover {

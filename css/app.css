@@ -459,6 +459,7 @@ template {
   top: 36vh;
   right: 0;
   left: 0;
+  border: 1px solid #42d4f4;
   margin: 0 auto;
   width: 90%;
   background: #323232;
@@ -466,7 +467,7 @@ template {
   border-radius: 8px;
   display: none;
   z-index: 10000;
-  opacity: 1;
+  opacity: .97;
   transition: opacity .5s ease; }
   @media (min-width: 768px) {
     .alert-box {
@@ -664,7 +665,9 @@ template {
   margin: .5em auto;
   padding: .5em;
   width: 80%;
-  max-width: 90%; }
+  max-width: 90%;
+  z-index: 1000;
+  opacity: .9; }
   @media (min-width: 768px) {
     .main-alert {
       width: 80%;
@@ -690,8 +693,10 @@ template {
     border: 1px solid #fff; }
 
 .widget {
+  position: relative;
   padding: 1.5em;
   width: 100%;
+  height: auto;
   border: 1px solid #e5e5ee;
   border-bottom: none; }
   @media (min-width: 768px) {
@@ -701,6 +706,7 @@ template {
 .traffic {
   border-top: none;
   width: 100%;
+  height: auto;
   margin: 0 auto; }
 
 @media (min-width: 768px) {
@@ -735,6 +741,16 @@ template {
   .settings {
     border-bottom: none; } }
 
+/* .traffic {
+	border: 1px solid green;
+}
+canvas {
+	border: 1px solid red;
+}
+
+iframe {
+	border: 1px solid blue !important;
+} */
 .main-header,
 .header-list,
 .profile-div {
@@ -846,6 +862,7 @@ template {
     border-color: #42d4f4; }
 
 .alert-close-btn, .remove-btn {
+  border: 1px solid #fff;
   background: #42d4f4;
   /* $color-selected; */
   transition: all .4s ease; }
