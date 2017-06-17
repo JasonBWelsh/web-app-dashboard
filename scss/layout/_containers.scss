@@ -20,7 +20,7 @@
 	border-radius: $br;
 	display: none;
 	z-index: 10000;
-	opacity: .97;
+	opacity: .95;
 	transition: opacity .5s ease;
 	@media (min-width: $break-m) {
 		width: 40%;
@@ -99,10 +99,10 @@
 	}
 }
 
+// main nav
 .main-nav {
-	background: $color-sidebar;
+	background: $light-blue;
 	@media (min-width: $break-m) {
-		/* align-self: stretch; */
 	}
 }
 
@@ -114,13 +114,18 @@
 		@include flexCenter;
 		transition: all .4s ease;
 		&:hover {
-			background: lighten($color-sidebar, 10%);
+			background: $light-blue;
 			border-bottom: 1px solid $white;
 		}
 	}
 	@media (min-width: $break-m) {
 		flex-direction: column;
 	}
+}
+
+.main-nav-selected {
+	background: $light-blue;
+	border-bottom: 1px solid $white;
 }
 
 .nav-icon-div {
@@ -140,7 +145,7 @@
 	top: 100%;
 	opacity: 0;
 	z-index: -100;
-	background: lighten($color-sidebar, 10%);
+	background: $light-blue;
 	color: $white;
 	border-radius: .25em;
 	padding: 1em;
@@ -172,6 +177,8 @@
 	@include flexColumn;
 	align-items: center;
 	position: relative;
+	background: rgba($dark, .5);
+	color: $white;
 	@media (min-width: $break-m) {
 		flex-direction: row;
 		flex-wrap: wrap;
@@ -179,7 +186,6 @@
 	}
 	h2 {
 		padding: 1em;
-		color: $aqua-blue;
 	}
 }
 
@@ -198,9 +204,9 @@
 .search-div {
 	@media (min-width: $break-m) {
 		@include flexCenter;
-		border: 1px solid $color-text-light;
 		padding: 1em;
-		background: lighten($color-text-light, 5%);
+		background: lighten($aqua-blue, 10%);
+		border-radius: $br;
 		flex: 8 auto;
 		justify-content: flex-end;
 	}
@@ -209,13 +215,13 @@
 
 .search {  // search input
 	border-radius: $br;
-	border: 1px solid $color-text-light;
+	border: 1px solid $white;
 	height: 45px;
 	padding: .3em 1em;
 	background: url(../icons/magnifying-glass.svg) no-repeat;
 	background-position: 95% 50%;
 	background-size: 7%;
-	background-color: $white;
+	background-color: $light-blue;
 	color: $aqua-blue;
 	transition: all .4s ease;
 	@media (min-width: $break-m) {
@@ -238,19 +244,21 @@
 	position: relative; // for .remove-btn
 	position: absolute;
 	top: 10vh;
-	background: $color-primary;
+	background: $dark;
 	color: $white;
 	border-radius: $br;
+	border: 1px solid $white;
 	margin: .5em auto;
 	padding: .5em;
 	width: 80%;
 	max-width: 90%;
 	z-index: 1000;
-	opacity: .9;
+	opacity: .8;
 	@media (min-width: $break-m) {
 		width: 80%;
 		padding: 1em;
 		right: 10%;
+		top: 20vh;
 	}
 	h3 {
 		font-weight: bold;
@@ -317,7 +325,13 @@
 	}
 	& li {
 		padding: .5em;
+		border-radius: $br;
 	}
+}
+
+.traffic-selected {
+	background: $light-blue;
+	color: $white;
 }
 //
 

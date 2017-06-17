@@ -69,7 +69,7 @@
 
         <nav class="main-nav">
           <ul class="nav-list">
-            <li class="navLink tool" data-tip="Dashboard" tabindex="4">
+            <li class="navLink tool main-nav-selected" data-tip="Dashboard" tabindex="4">
               <div class="nav-icon-div">
                 <img src="icons/icon-dashboard.svg" alt="Dashboard Icon"> <!--dashboard-->
               </div>
@@ -99,7 +99,7 @@
             <h2>Dashboard</h2>
 
             <div class="search-div">
-              <input type="text" class="search" name="search" placeholder="Search" onfocus="this.placeholder=''" onblur="this.placeholder='search'">
+              <input type="text" class="search" name="search" onfocus="this.placeholder=''" onblur="this.placeholder=''">
             </div>
           </section>
 
@@ -116,7 +116,7 @@
               <ul class="traffic-list">
                 <li>Hourly</li>
                 <li>Daily</li>
-                <li>Weekly</li>
+                <li class="traffic-selected">Weekly</li>
                 <li>Monthly</li>
               </ul>
             </header>

@@ -15,8 +15,8 @@
 	color: $white;
 	background: lighten($dark, 20%);
 	&:hover {
-		color: $aqua-blue;
-		border-color: $aqua-blue;
+		color: $light-blue;
+		border-color: $light-blue;
 	}
 }
 
@@ -25,7 +25,7 @@
 	background: $aqua-blue;/* $color-selected; */
 	transition: all .4s ease;
 	&:hover {
-		background: darken($aqua-blue/* $color-selected */, 20%);
+		background: darken($light-blue/* $color-selected */, 20%);
 	}
 }
 
