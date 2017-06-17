@@ -709,6 +709,26 @@ template {
   height: auto;
   margin: 0 auto; }
 
+.traffic-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between; }
+  @media (min-width: 768px) {
+    .traffic-header {
+      flex-direction: row; } }
+
+.traffic-list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; }
+  @media (min-width: 768px) {
+    .traffic-list {
+      width: 40%; } }
+  .traffic-list li {
+    padding: .5em; }
+
 @media (min-width: 768px) {
   .daily-traffic,
   .mobile-users,

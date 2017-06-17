@@ -291,13 +291,35 @@
 	}
 }
 
-
+// traffic top section
 .traffic {
 	border-top: none;
 	width: 100%;
 	height: auto;
 	margin: 0 auto;
 }
+
+.traffic-header {
+	@include flexCenter;
+	@include flexColumn;
+	@include flexJustifyContent(#{space-between});
+	@media(min-width: $break-m) {
+		@include flexRow;
+	}
+}
+
+.traffic-list {
+	@include flexy;
+	@include flexJustifyContent(#{space-between});
+	width: 100%;
+	@media(min-width: $break-m) {
+		width: 40%;
+	}
+	& li {
+		padding: .5em;
+	}
+}
+//
 
 .daily-traffic,
 .mobile-users,
