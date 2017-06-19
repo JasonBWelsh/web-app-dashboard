@@ -110,10 +110,20 @@ let lineChart = new Chart(weeklyTraffic, {
 	},
 	options: {
 		scales: {
+			xAxes: [{
+				gridLines: {
+					color: "#323232",
+					display: false
+				}
+			}],
 			yAxes: [{
 				ticks: {
 					beginAtZero: true
-				}
+				},
+				gridLines: {
+          			color: "#323232",
+          			display: false
+        		}
 			}]
 		}
 	}

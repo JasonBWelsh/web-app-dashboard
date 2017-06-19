@@ -103,7 +103,8 @@
 .main-nav {
 	background: $dark-grey;	
 	@media (min-width: $break-m) {
-		border: 1px solid $light-blue;
+		/* border: 1px solid $light-blue; */
+		/* background: linear-gradient(to top, $light-blue, $dark-grey); */
 	}
 }
 
@@ -207,6 +208,7 @@
 		@include flexCenter;
 		padding: 1em;
 		background: $dark-grey;
+		background: linear-gradient(to right, $dark-grey, $light-blue);
 		border-radius: $br;
 		border: 1px solid $light-blue;
 		flex: 8 auto;
@@ -232,7 +234,6 @@
 	}
 	&:focus {
 		background-color: $dark;
-		/* border-color: $white; */
 		color: $white;
 		@media (min-width: $break-m) {
 			width: 40%;
@@ -311,6 +312,7 @@
 	border-top: none;
 	width: 100%;
 	height: auto;
+	/* max-height: 600px; */
 	margin: 0 auto;
 }
 
@@ -385,14 +387,14 @@
 
 
 //troubleshoot
-/* .traffic {
-	border: 1px solid green;
-}
-canvas {
-	border: 1px solid red;
-}
 
-iframe {
-	border: 1px solid blue !important;
+
+/* canvas {
+	max-height: 500px;
+
 } */
-//
+
+/* iframe {
+	border: 1px solid blue !important; 
+}*/ 
+
