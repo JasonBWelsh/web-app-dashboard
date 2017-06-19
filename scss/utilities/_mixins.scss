@@ -1,7 +1,7 @@
 // ----------------- mixins 
 
 // center
-@mixin center($w, $h:null) { 
+@mixin center($w:null, $h:null) { 
 	width: $w;
 	max-width: $max-width;
 	height: $h;

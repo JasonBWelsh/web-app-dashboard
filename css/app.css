@@ -444,13 +444,15 @@ template {
   display: none; }
 
 .container {
-  width: 100%;
   max-width: 1500px;
-  height: 100vh;
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  height: 100vh; }
+  height: 100vh;
+  max-width: 1500px; }
+  @media (min-width: 768px) {
+    .container {
+      padding-right: 64px; } }
 
 .alert-box {
   -webkit-box-shadow: 4px 4px 5px 0px #323232;

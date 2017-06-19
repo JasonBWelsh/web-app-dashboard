@@ -1,7 +1,11 @@
 .container { //wraps whole app
-	@include center(100%, 100vh);
+	@include center();
 	position: relative; // for .alert-box
 	height: 100vh;
+	max-width: $max-width;
+	@media (min-width: $break-m) {
+		padding-right: 64px; //width of nav
+	}
 }
 
 
