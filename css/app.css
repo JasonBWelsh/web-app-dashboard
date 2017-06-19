@@ -633,7 +633,7 @@ template {
     align-items: center;
     padding: 1em;
     background: #3a3a3a;
-    background: linear-gradient(to right, #3a3a3a, #72dff7);
+    background: linear-gradient(to right, #000, #72dff7);
     border-radius: 8px;
     border: 1px solid #72dff7;
     flex: 8 auto;
@@ -647,7 +647,7 @@ template {
   background: url(../icons/magnifying-glass.svg) no-repeat;
   background-position: 95% 50%;
   background-size: 7%;
-  background-color: #3a3a3a;
+  background-color: #000;
   color: #fff;
   transition: all .4s ease; }
   @media (min-width: 768px) {

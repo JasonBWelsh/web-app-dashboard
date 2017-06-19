@@ -208,7 +208,7 @@
 		@include flexCenter;
 		padding: 1em;
 		background: $dark-grey;
-		background: linear-gradient(to right, $dark-grey, $light-blue);
+		background: linear-gradient(to right, $dark, $light-blue);
 		border-radius: $br;
 		border: 1px solid $light-blue;
 		flex: 8 auto;
@@ -225,7 +225,7 @@
 	background: url(../icons/magnifying-glass.svg) no-repeat;
 	background-position: 95% 50%;
 	background-size: 7%;
-	background-color: $dark-grey;
+	background-color: $dark;
 	color: $white;
 	transition: all .4s ease;
 	@media (min-width: $break-m) {
