@@ -537,7 +537,7 @@ template {
       flex-direction: row; } }
 
 .main-nav {
-  background: #3a3a3a; }
+  background: #000; }
   @media (min-width: 768px) {
     .main-nav {
       /* border: 1px solid $light-blue; */
