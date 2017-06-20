@@ -89,6 +89,10 @@ const dailyTraffic = document.getElementById('daily-traffic');
 const weeklyTraffic = document.getElementById('weekly-traffic');
 const monthlyTraffic = document.getElementById('monthly-traffic');
 
+Chart.defaults.global.animation.onComplete = () => {
+	mainAlert.style.opacity = '0.8';
+}
+
 
 let hourlyChart = new Chart(hourlyTraffic, {
 	type: 'line',
@@ -142,7 +146,7 @@ let hourlyChart = new Chart(hourlyTraffic, {
 let dailyChart = new Chart(dailyTraffic, {
 	type: 'line',
 	data: {
-		labels: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+		labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
 		datasets: [
 			{
 				label: "Daily Traffic",
@@ -167,6 +171,7 @@ let dailyChart = new Chart(dailyTraffic, {
 		]
 	},
 	options: {
+		responsive: true,
 		scales: {
 			xAxes: [{
 				gridLines: {
@@ -199,8 +204,8 @@ let weeklyChart = new Chart(weeklyTraffic, {
 				label: "Weekly Traffic",
 				fill: true,
 				lineTension: 0.5,
-				backgroundColor: "rgba(66,212,244,0.6)", //$aqua-blue
-				borderColor: "rgba(66,212,244,1)",
+				backgroundColor: "#e8ff1e", //$yellow
+				borderColor: "#a111af", //$light-purple
 				borderCapStyle: 'butt',
 				borderDash: [],
 				borderDashOffset: 0.0,
@@ -248,7 +253,7 @@ let monthlyChart = new Chart(monthlyTraffic, {
 				fill: true,
 				lineTension: 0.5,
 				backgroundColor: "#a111af", //$light-purple
-				borderColor: "#72dff7", //$light-blue
+				borderColor: "#e8ff1e", //$yellow
 				borderCapStyle: 'butt',
 				borderDash: [],
 				borderDashOffset: 0.0,
@@ -257,7 +262,7 @@ let monthlyChart = new Chart(monthlyTraffic, {
 				pointBorderWidth: 1,
 				pointHoverRadius: 5,
 				pointHoverBackgroundColor: "rgba(66,212,244,1)",
-				pointHoverBorderColor: "rgba(220,220,220,1)",
+				pointHoverBorderColor: "#e8ff1e",
 				pointHoverBorderWidth: 2,
 				pointRadius: 7,
 				pointHitRadius: 10,
