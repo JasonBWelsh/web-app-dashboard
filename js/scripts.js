@@ -6,6 +6,8 @@ const alertBox = document.querySelector('.alert-box');
 const alertUL = alertBox.querySelector('ul');
 const alertCloseBtn = alertBox.querySelector('.alert-close-btn');
 const mainAlert = document.querySelector('.main-alert');
+const trafficSection = document.querySelector('section.traffic');
+const trafficList = document.querySelector('.traffic-list');
 
 
 function toggleAlertBox() {
@@ -77,20 +79,76 @@ mainAlert.addEventListener('click', (e) => {
 	}
 });
 
+
+
 //============================
 //Charts
 //============================
+const hourlyTraffic = document.getElementById('hourly-traffic');
+const dailyTraffic = document.getElementById('daily-traffic');
 const weeklyTraffic = document.getElementById('weekly-traffic');
-let lineChart = new Chart(weeklyTraffic, {
+const monthlyTraffic = document.getElementById('monthly-traffic');
+
+
+let hourlyChart = new Chart(hourlyTraffic, {
+	type: 'line',
+	data: {
+		labels: ['12 AM - 5 AM', '6 AM - 11 AM', '12 PM - 5 PM', '6 PM - 11:59PM'],
+		datasets: [
+			{
+				label: "Hourly Traffic",
+				fill: true,
+				lineTension: 0.5,
+				backgroundColor: "rgba(66,212,244,0.6)", //$aqua-blue
+				borderColor: "rgba(66,212,244,1)",
+				borderCapStyle: 'butt',
+				borderDash: [],
+				borderDashOffset: 0.0,
+				borderJoinStyle: 'miter',
+				pointBorderColor: "#fff",
+				pointBorderWidth: 1,
+				pointHoverRadius: 5,
+				pointHoverBackgroundColor: "rgba(66,212,244,1)",
+				pointHoverBorderColor: "rgba(220,220,220,1)",
+				pointHoverBorderWidth: 2,
+				pointRadius: 7,
+				pointHitRadius: 10,
+				data: [12,23,35,19]
+			}
+		]
+	},
+	options: {
+		scales: {
+			xAxes: [{
+				gridLines: {
+					color: "#000000",
+					display: false
+				}
+			}],
+			yAxes: [{
+				ticks: {
+					beginAtZero: true
+				},
+				gridLines: {
+          			color: "#000000",
+          			display: false
+        		}
+			}]
+		}
+	}
+});
+
+
+let dailyChart = new Chart(dailyTraffic, {
 	type: 'line',
 	data: {
 		labels: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
 		datasets: [
 			{
-				label: "Weekly Traffic",
+				label: "Daily Traffic",
 				fill: true,
 				lineTension: 0.5,
-				backgroundColor: "rgba(66,212,244,0.4)", //$aqua-blue
+				backgroundColor: "rgba(66,212,244,0.6)", //$aqua-blue
 				borderColor: "rgba(66,212,244,1)",
 				borderCapStyle: 'butt',
 				borderDash: [],
@@ -112,7 +170,7 @@ let lineChart = new Chart(weeklyTraffic, {
 		scales: {
 			xAxes: [{
 				gridLines: {
-					color: "#323232",
+					color: "#000000",
 					display: false
 				}
 			}],
@@ -121,7 +179,7 @@ let lineChart = new Chart(weeklyTraffic, {
 					beginAtZero: true
 				},
 				gridLines: {
-          			color: "#323232",
+          			color: "#000000",
           			display: false
         		}
 			}]
@@ -129,3 +187,142 @@ let lineChart = new Chart(weeklyTraffic, {
 	}
 });
 
+
+
+
+let weeklyChart = new Chart(weeklyTraffic, {
+	type: 'line',
+	data: {
+		labels: ['1-7', '8-14', '15-22', '23 + '],
+		datasets: [
+			{
+				label: "Weekly Traffic",
+				fill: true,
+				lineTension: 0.5,
+				backgroundColor: "rgba(66,212,244,0.6)", //$aqua-blue
+				borderColor: "rgba(66,212,244,1)",
+				borderCapStyle: 'butt',
+				borderDash: [],
+				borderDashOffset: 0.0,
+				borderJoinStyle: 'miter',
+				pointBorderColor: "#fff",
+				pointBorderWidth: 1,
+				pointHoverRadius: 5,
+				pointHoverBackgroundColor: "rgba(66,212,244,1)",
+				pointHoverBorderColor: "rgba(220,220,220,1)",
+				pointHoverBorderWidth: 2,
+				pointRadius: 7,
+				pointHitRadius: 10,
+				data: [153,175,164,186]
+			}
+		]
+	},
+	options: {
+		scales: {
+			xAxes: [{
+				gridLines: {
+					color: "#000000",
+					display: false
+				}
+			}],
+			yAxes: [{
+				ticks: {
+					beginAtZero: false
+				},
+				gridLines: {
+          			color: "#000000",
+          			display: false
+        		}
+			}]
+		}
+	}
+});
+
+let monthlyChart = new Chart(monthlyTraffic, {
+	type: 'line',
+	data: {
+		labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],
+		datasets: [
+			{
+				label: "Weekly Traffic",
+				fill: true,
+				lineTension: 0.5,
+				backgroundColor: "rgba(66,212,244,0.6)", //$aqua-blue
+				borderColor: "rgba(66,212,244,1)",
+				borderCapStyle: 'butt',
+				borderDash: [],
+				borderDashOffset: 0.0,
+				borderJoinStyle: 'miter',
+				pointBorderColor: "#fff",
+				pointBorderWidth: 1,
+				pointHoverRadius: 5,
+				pointHoverBackgroundColor: "rgba(66,212,244,1)",
+				pointHoverBorderColor: "rgba(220,220,220,1)",
+				pointHoverBorderWidth: 2,
+				pointRadius: 7,
+				pointHitRadius: 10,
+				data: [433,459,494,533,606,578,612,633]
+			}
+		]
+	},
+	options: {
+		scales: {
+			xAxes: [{
+				gridLines: {
+					color: "#000000",
+					display: false
+				}
+			}],
+			yAxes: [{
+				ticks: {
+					beginAtZero: false
+				},
+				gridLines: {
+          			color: "#000000",
+          			display: false
+        		}
+			}]
+		}
+	}
+});
+
+// Select traffic-list li 
+
+hourlyTraffic.style.display = 'none';
+weeklyTraffic.style.display = 'none';
+monthlyTraffic.style.display = 'none';
+
+trafficList.addEventListener('click', (e) => {
+	if (e.target.tagName === 'LI') {
+		let li = e.target;
+		let lis = trafficList.children;
+		for (let i = 0; i < lis.length; i++) {  // remove .traffic-selected when another li is clicked
+			if (lis[i].classList.contains('traffic-selected')) {
+				let curLi = lis[i];
+				curLi.classList.remove('traffic-selected');
+			}
+		}
+		li.classList.add('traffic-selected'); // add .traffic-selected to clicked li
+		//Display chart if corresponding li is selected
+		if (li.classList.contains('hourly')) {
+			hourlyTraffic.style.display = 'block';
+		} else {
+			hourlyTraffic.style.display = 'none';
+		}
+		if (li.classList.contains('daily')) {
+			dailyTraffic.style.display = 'block';
+		} else {
+			dailyTraffic.style.display = 'none';
+		}
+		if (li.classList.contains('weekly')) {
+			weeklyTraffic.style.display = 'block';
+		} else {
+			weeklyTraffic.style.display = 'none';
+		}
+		if (li.classList.contains('monthly')) {
+			monthlyTraffic.style.display = 'block';
+		} else {
+			monthlyTraffic.style.display = 'none';
+		}
+	}
+});

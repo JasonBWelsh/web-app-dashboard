@@ -634,8 +634,8 @@ template {
     justify-content: center;
     align-items: center;
     padding: 1em;
-    background: #3a3a3a;
-    background: linear-gradient(to right, #000, #72dff7);
+    background: dark;
+    /* background: linear-gradient(to right, $dark, $light-blue); */
     border-radius: 8px;
     border: 1px solid #72dff7;
     flex: 8 auto;
@@ -745,11 +745,14 @@ template {
       width: 40%; } }
   .traffic-list li {
     padding: .5em;
-    border-radius: 8px; }
+    border-radius: 8px;
+    transition: all .4s ease; }
+  .traffic-list li:hover {
+    background: #3a3a3a; }
 
 .traffic-selected {
-  background: #72dff7;
-  color: #000; }
+  background: #a111af;
+  /* color: $dark; */ }
 
 @media (min-width: 768px) {
   .daily-traffic,
@@ -783,6 +786,12 @@ template {
   .settings {
     border-bottom: none; } }
 
+canvas,
+.hourly-traffic,
+.weekly-traffic,
+.monthly-traffic {
+  display: none; }
+
 /* canvas {
 	max-height: 500px;
 
@@ -805,9 +814,8 @@ template {
   align-items: center; }
   @media (min-width: 768px) {
     .main-header {
-      		/* padding-left: 0;
-      		padding-right: 0;
-       */
+      /* padding-left: 0; */
+      padding-right: 0;
       flex-direction: row;
       justify-content: space-between; } }
 

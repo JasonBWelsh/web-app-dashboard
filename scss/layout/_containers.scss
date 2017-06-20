@@ -211,8 +211,8 @@
 	@media (min-width: $break-m) {
 		@include flexCenter;
 		padding: 1em;
-		background: $dark-grey;
-		background: linear-gradient(to right, $dark, $light-blue);
+		background: dark;
+		/* background: linear-gradient(to right, $dark, $light-blue); */
 		border-radius: $br;
 		border: 1px solid $light-blue;
 		flex: 8 auto;
@@ -339,12 +339,16 @@
 	& li {
 		padding: .5em;
 		border-radius: $br;
+		transition: all .4s ease;
+	}
+	& li:hover {
+		background: $dark-grey;
 	}
 }
 
 .traffic-selected {
-	background: $light-blue;
-	color: $dark;
+	background: $light-purple;
+	/* color: $dark; */
 }
 //
 
@@ -388,7 +392,13 @@
 	}
 }
 
-
+canvas,  // to prevent space in layout
+.hourly-traffic,
+.weekly-traffic,
+.monthly-traffic
+ {
+	display: none; 
+}
 
 //troubleshoot
 
