@@ -555,14 +555,14 @@ template {
     align-items: center;
     transition: all .4s ease; }
     .nav-list li:hover {
-      background: #72dff7;
+      background: #a111af;
       /* border-bottom: 1px solid $white; */ }
   @media (min-width: 768px) {
     .nav-list {
       flex-direction: column; } }
 
 .main-nav-selected {
-  background: #72dff7;
+  background: #a111af;
   /* border: 1px solid $light-blue; */ }
 
 .nav-icon-div {
@@ -578,7 +578,7 @@ template {
   top: 100%;
   opacity: 0;
   z-index: -100;
-  background: #72dff7;
+  background: #a111af;
   color: #fff;
   border-radius: 8px;
   padding: 1em;
@@ -858,7 +858,7 @@ canvas,
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  background: #42d4f4; }
+  background: #a111af; }
 
 .profile-div p {
   margin: 0;

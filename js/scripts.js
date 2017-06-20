@@ -99,8 +99,8 @@ let hourlyChart = new Chart(hourlyTraffic, {
 				label: "Hourly Traffic",
 				fill: true,
 				lineTension: 0.5,
-				backgroundColor: "rgba(66,212,244,0.6)", //$aqua-blue
-				borderColor: "rgba(66,212,244,1)",
+				backgroundColor: "#72dff7", //$light-blue
+				borderColor: "#a111af",
 				borderCapStyle: 'butt',
 				borderDash: [],
 				borderDashOffset: 0.0,
@@ -148,8 +148,8 @@ let dailyChart = new Chart(dailyTraffic, {
 				label: "Daily Traffic",
 				fill: true,
 				lineTension: 0.5,
-				backgroundColor: "rgba(66,212,244,0.6)", //$aqua-blue
-				borderColor: "rgba(66,212,244,1)",
+				backgroundColor: "#a111af", //$light-purple
+				borderColor: "#72dff7", //$light-blue
 				borderCapStyle: 'butt',
 				borderDash: [],
 				borderDashOffset: 0.0,
@@ -247,8 +247,8 @@ let monthlyChart = new Chart(monthlyTraffic, {
 				label: "Weekly Traffic",
 				fill: true,
 				lineTension: 0.5,
-				backgroundColor: "rgba(66,212,244,0.6)", //$aqua-blue
-				borderColor: "rgba(66,212,244,1)",
+				backgroundColor: "#a111af", //$light-purple
+				borderColor: "#72dff7", //$light-blue
 				borderCapStyle: 'butt',
 				borderDash: [],
 				borderDashOffset: 0.0,
