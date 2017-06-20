@@ -92,7 +92,8 @@ const barDailyTraffic = document.getElementById('bar-daily-traffic');
 const mobileUsers = document.getElementById('mobile-users');
 
 Chart.defaults.global.animation.onComplete = () => {
-	mainAlert.style.opacity = '0.8';
+	mainAlert.style.opacity = '0.9';
+	mainAlert.style.backgroundColor = "#000000";
 }
 
 

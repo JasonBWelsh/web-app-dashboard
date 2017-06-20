@@ -19,7 +19,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 100%;
   line-height: 1.5;
-  background: #000;
+  background: #222;
   color: #fff; }
 
 h1 {
@@ -465,7 +465,7 @@ template {
   border: 1px solid #42d4f4;
   margin: 0 auto;
   width: 90%;
-  background: #000;
+  background: #222;
   color: #fff;
   border-radius: 8px;
   display: none;
@@ -508,7 +508,7 @@ template {
   align-items: center;
   flex-direction: column;
   border-radius: 8px;
-  background: #333333;
+  background: #555555;
   margin-bottom: 1em;
   padding: .5em; }
 
@@ -518,12 +518,12 @@ template {
   padding: .5em;
   border-radius: 8px;
   width: 60%;
-  background: #333333;
+  background: #555555;
   transition: all .4s ease; }
   .item-text-box:hover {
     border-color: #fff; }
   .item-text-box:focus {
-    background: #1a1a1a;
+    background: #3c3c3c;
     color: #fff;
     width: 100%; }
 
@@ -540,7 +540,7 @@ template {
       /* margin-left: 64px; */ } }
 
 .main-nav {
-  background: #000; }
+  background: #222; }
   @media (min-width: 768px) {
     .main-nav {
       /* border: 1px solid $light-blue; */
@@ -611,7 +611,7 @@ template {
   flex-direction: column;
   align-items: center;
   position: relative;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(34, 34, 34, 0.5);
   color: #fff; }
   @media (min-width: 768px) {
     .main {
@@ -654,7 +654,7 @@ template {
   background: url(../icons/magnifying-glass.svg) no-repeat;
   background-position: 95% 50%;
   background-size: 7%;
-  background-color: #000;
+  background-color: #222;
   color: #fff;
   transition: all .4s ease; }
   @media (min-width: 768px) {
@@ -662,7 +662,7 @@ template {
       width: 25%;
       /* border: none; */ } }
   .search:focus {
-    background-color: #000;
+    background-color: #222;
     color: #fff; }
     @media (min-width: 768px) {
       .search:focus {
@@ -675,7 +675,7 @@ template {
   position: relative;
   position: absolute;
   top: 20vh;
-  background: #000;
+  background: #222;
   color: #fff;
   border-radius: 8px;
   border: 1px solid #fff;
@@ -714,7 +714,7 @@ template {
     border: 1px solid #fff; }
 
 .main section {
-  border-color: #e8ff1e; }
+  /* border-color: $yellow; */ }
 
 .widget {
   position: relative;
@@ -802,6 +802,51 @@ template {
   .settings {
     border-bottom: none; } }
 
+.social-stats-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #72dff7; }
+  @media (min-width: 768px) {
+    .social-stats-list {
+      flex-direction: row; } }
+  .social-stats-list li {
+    border: 1px solid #72dff7;
+    border-radius: 8px;
+    height: 50%;
+    width: 100%;
+    padding: 1em;
+    background: #000;
+    font-size: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between; }
+    @media (min-width: 768px) {
+      .social-stats-list li {
+        width: 25%; } }
+  .social-stats-list p {
+    margin: 0; }
+  .social-stats-list img {
+    height: 110px; }
+
+.social-icon-wrap,
+.social-stats-wrap {
+  /* height: 50%;
+  width: 100%; */
+  height: auto;
+  width: auto; }
+
+.social-stats-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
 canvas {
   max-height: 450px; }
 
@@ -815,7 +860,7 @@ canvas {
   display: flex; }
 
 .main-header {
-  background: #000;
+  background: #222;
   color: #fff;
   width: 100%;
   padding: 1em;
@@ -915,7 +960,7 @@ canvas {
   padding: .1em .5em;
   margin-top: .7em;
   color: #fff;
-  background: #333333; }
+  background: #555555; }
   .add-notification-btn:hover {
     color: #72dff7;
     border-color: #72dff7; }

@@ -305,7 +305,7 @@
 //Main section layout
 
 .main section {
-	border-color: $yellow;
+	/* border-color: $yellow; */
 }
 
 .widget {
@@ -411,6 +411,53 @@
 	}
 }
 
+// Social Stats
+
+.social-stats-list {
+	@include flexCenter;
+	@include flexColumn;
+	@include flexJustifyContent(#{space-between});
+	color: $light-blue;
+	@media(min-width: $break-m) {
+		@include flexRow;
+	}
+	li {
+		border: 1px solid $light-blue;
+		border-radius: $br;
+		height: 50%;
+		width: 100%;
+		padding: 1em;
+		background: $black;
+		font-size: 1.5em;
+		margin-top: 1em;
+		margin-bottom: 1em;
+		@include flexCenter;
+		justify-content: space-between;
+		@media (min-width: $break-m) {
+			
+			width: 25%;
+		}	
+	}
+	p {
+		margin: 0;
+	}
+	img {
+		height: 110px;
+	}
+}
+
+.social-icon-wrap,
+.social-stats-wrap {
+	/* height: 50%;
+	width: 100%; */
+	height: auto;
+	width: auto;
+}
+
+.social-stats-wrap {
+	@include flexCenter;
+	@include flexColumn;
+}
 
 //troubleshoot Chart
 
