@@ -269,9 +269,9 @@
 	opacity: 0;
 	transition: all .7s ease;
 	@media (min-width: $break-m) {
-		width: 80%;
+		width: 50%;
 		padding: 1em;
-		right: 10%;
+		right: 30%;
 		top: 40vh;
 	}
 	h3 {
@@ -369,6 +369,7 @@
 }
 //
 
+
 .daily-traffic,
 .mobile-users,
 .new-members,
@@ -377,7 +378,8 @@
 .settings {
 	@media(min-width: $break-m) {
 		flex: 1 50%;
-		@include mainBorder($color-text-light);
+		max-width: 50%;
+		@include mainBorder($color-text-light); 
 	}
 }
 

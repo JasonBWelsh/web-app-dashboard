@@ -88,6 +88,8 @@ const hourlyTraffic = document.getElementById('hourly-traffic');
 const dailyTraffic = document.getElementById('daily-traffic');
 const weeklyTraffic = document.getElementById('weekly-traffic');
 const monthlyTraffic = document.getElementById('monthly-traffic');
+const barDailyTraffic = document.getElementById('bar-daily-traffic');
+const mobileUsers = document.getElementById('mobile-users');
 
 Chart.defaults.global.animation.onComplete = () => {
 	mainAlert.style.opacity = '0.8';
@@ -141,6 +143,7 @@ let hourlyChart = new Chart(hourlyTraffic, {
 		}
 	}
 });
+
 
 
 let dailyChart = new Chart(dailyTraffic, {
@@ -291,6 +294,7 @@ let monthlyChart = new Chart(monthlyTraffic, {
 	}
 });
 
+
 // Select traffic-list li 
 
 hourlyTraffic.style.display = 'none';
@@ -328,6 +332,91 @@ trafficList.addEventListener('click', (e) => {
 			monthlyTraffic.style.display = 'block';
 		} else {
 			monthlyTraffic.style.display = 'none';
+		}
+	}
+});
+
+// Daily Traffic Bar Chart
+let barDailyChart = new Chart(barDailyTraffic, {
+	type: 'bar',
+	data: {
+		labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+		datasets: [
+			{
+				label: "Weekly Traffic",
+				fill: true,
+				lineTension: 0.5,
+				backgroundColor: "#e8ff1e", //$yellow
+				borderColor: "#a111af", //$light-purple
+				borderCapStyle: 'butt',
+				borderDash: [],
+				borderDashOffset: 0.0,
+				borderJoinStyle: 'miter',
+				pointBorderColor: "#fff",
+				pointBorderWidth: 1,
+				pointHoverRadius: 5,
+				pointHoverBackgroundColor: "rgba(66,212,244,1)",
+				pointHoverBorderColor: "rgba(220,220,220,1)",
+				pointHoverBorderWidth: 2,
+				pointRadius: 7,
+				pointHitRadius: 10,
+				data: [33,59,78,63,69,55,40]
+			}
+		]
+	},
+	options: {
+		scales: {
+			xAxes: [{
+				gridLines: {
+					color: "#000000",
+					display: false
+				}
+			}],
+			yAxes: [{
+				ticks: {
+					beginAtZero: true
+				},
+				gridLines: {
+          			color: "#000000",
+          			display: false
+        		}
+			}]
+		}
+	}
+});
+
+//Mobile Users Doughnut Chart
+let mobileUsersChart = new Chart(mobileUsers, {
+	type: 'doughnut',
+	data: {
+		labels: ['Phones', 'Tablets', 'Desktop'],
+		datasets: [
+			{
+				label: "Mobile Users",
+				fill: true,
+				lineTension: 0.5,
+				backgroundColor: ["#a111af", "#e8ff1e", "#72dff7"],
+				borderColor: "#000000"/*"#a111af"*/, 
+				borderCapStyle: 'butt',
+				borderDash: [],
+				borderDashOffset: 0.0,
+				borderJoinStyle: 'miter',
+				pointBorderColor: "#fff",
+				pointBorderWidth: 1,
+				pointHoverRadius: 5,
+				pointHoverBackgroundColor: "rgba(66,212,244,1)",
+				pointHoverBorderColor: "rgba(220,220,220,1)",
+				pointHoverBorderWidth: 2,
+				pointRadius: 7,
+				pointHitRadius: 10,
+				data: [63, 7, 30]
+			}
+		]
+	},
+	options: {
+		cutoutPercentage: 20,
+		animation: {
+			animationScale: true
 		}
 	}
 });
