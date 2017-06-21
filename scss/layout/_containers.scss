@@ -468,14 +468,20 @@
 // New Members and Recent Activity sections
 // ==
 
-.new-members-list li {
+.new-members,
+.recent-activity {
+	font-size: .8rem;
+}
+
+.new-members-list li,
+.recent-activity-list li {
 	@include flexy;
 	@include flexJustifyContent(#{space-between});
 	margin-top: .5em;
 	margin-bottom: .5em;
 	padding: .5em;
 	color: $light-blue;
-	h3 {
+	p {
 		margin: 0;
 	}
 	a {
@@ -504,6 +510,23 @@
 
 .member-data {
 	@include flexColumn;
+}
+
+.recent-activity p + p {
+	color: $light-purple;
+}
+
+.activity-arrow {
+	@include flexCenter;
+	font-size: 1.5rem;
+	height: 29px;
+	width: 19px;
+	background: $black;
+	border: 1px solid $black;
+	transition: all .4s ease;
+	&:hover {
+		border: 1px solid $light-purple;
+	}
 }
 
 .member-icon {

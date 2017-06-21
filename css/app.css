@@ -18,7 +18,7 @@ body {
   padding: 0;
   font-family: "Roboto", sans-serif;
   font-size: 100%;
-  font-weight: lighter;
+  /* font-weight: lighter; */
   line-height: 1.5;
   background: #222;
   color: #fff; }
@@ -850,21 +850,30 @@ template {
   align-items: center;
   flex-direction: column; }
 
-.new-members-list li {
+.new-members,
+.recent-activity {
+  font-size: .8rem; }
+
+.new-members-list li,
+.recent-activity-list li {
   display: flex;
   justify-content: space-between;
   margin-top: .5em;
   margin-bottom: .5em;
   padding: .5em;
   color: #72dff7; }
-  .new-members-list li h3 {
+  .new-members-list li p,
+  .recent-activity-list li p {
     margin: 0; }
-  .new-members-list li a {
+  .new-members-list li a,
+  .recent-activity-list li a {
     color: #e8ff1e;
     transition: all .4s ease; }
-    .new-members-list li a:hover {
+    .new-members-list li a:hover,
+    .recent-activity-list li a:hover {
       color: #a111af; }
-  .new-members-list li:hover .member-icon {
+  .new-members-list li:hover .member-icon,
+  .recent-activity-list li:hover .member-icon {
     transform: scale(1.2) rotate(-15deg); }
 
 .member-info,
@@ -879,6 +888,22 @@ template {
 
 .member-data {
   flex-direction: column; }
+
+.recent-activity p + p {
+  color: #a111af; }
+
+.activity-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  height: 29px;
+  width: 19px;
+  background: #000;
+  border: 1px solid #000;
+  transition: all .4s ease; }
+  .activity-arrow:hover {
+    border: 1px solid #a111af; }
 
 .member-icon {
   height: 50px;
