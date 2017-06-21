@@ -178,7 +178,7 @@
                     <p>Arwen Welsh</p>
                     <a href="mailto:arwen@puppymail.com">arwen@puppymail.com</a>
                   </div>
-                  <span>6/20/17</span>
+                  <span>Joined: 6/20/17</span>
                 </div>
               </li>
               <li>
@@ -188,7 +188,7 @@
                     <p>Moya Welsh</p>
                     <a href="mailto:moya@puppymail.com">moya@puppymail.com</a>
                   </div>
-                  <span>6/20/17</span>
+                  <span>Joined: 6/20/17</span>
                 </div>
               </li>
               <li>
@@ -198,7 +198,7 @@
                     <p>Athena Welsh</p>
                     <a href="mailto:athena@puppymail.com">athena@puppymail.com</a>
                   </div>
-                  <span>6/15/17</span>
+                  <span>Joined: 6/15/17</span>
                 </div>
               </li>
               <li>
@@ -208,7 +208,7 @@
                     <p>Lily Welsh</p>
                     <a href="mailto:lily@puppymail.com">lily@puppymail.com</a>
                   </div>
-                  <span>6/20/23</span>
+                  <span>Joined: 6/20/23</span>
                 </div>
               </li>
             </ul>
@@ -262,7 +262,17 @@
           </section>
 
           <section class="widget message-user">
-            <h3>Message User</h3>
+            <!-- <h3>Message User</h3> -->
+            <form action="index.html" method="post">
+              <legend>Message User</legend>
+              <fieldset id="message-user">
+                <label for="message-user">Search for User</label>
+                <input type="text" id="user-search" placeholder="Search for User" name="user_search" required>
+                <label for="message-user">Message for User</label>
+                <textarea id="message-user" placeholder="Message for User" name="user_message" rows="10"></textarea>
+                <button id="submit-btn" type="submit">SEND</button>
+              </fieldset>
+            </form>
           </section>
 
           <section class="widget settings">

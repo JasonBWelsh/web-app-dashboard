@@ -66,3 +66,15 @@
 @mixin transStd () {
 	transition: all .4s ease;
 }
+
+// Form Buttons
+
+@mixin f-button($background, $color) {
+	background: $background;
+	color: $color;
+	text-align: center;
+	padding: .625em 1.25em;
+	border: none;
+	border-radius: $br;
+	@include transStd;
+}
