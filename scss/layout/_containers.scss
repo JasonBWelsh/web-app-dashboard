@@ -19,7 +19,7 @@
 	@include mainBorder($aqua-blue);
 	margin: 0 auto;
 	width: 90%;
-	background: $dark;
+	background: $black;
 	color: $white;
 	border-radius: $br;
 	display: none;
@@ -54,7 +54,7 @@
 		justify-content: space-between;
 		margin: .5em 0;
 		padding: .1em .5em;
-		background: transparentize($white, .7);
+		background: $dark;
 		border-radius: calc(#{$br} - 2px);
 	}
 }
@@ -64,7 +64,7 @@
 	@include flexCenter;
 	@include flexColumn;
 	border-radius: $br;
-	background: lighten($dark, 20%);
+	/* background: lighten($dark, 20%); */
 	margin-bottom: 1em;
 	padding: .5em;
 }
@@ -75,13 +75,13 @@
 	padding: .5em;
 	border-radius: $br;
 	width: 60%;
-	background: lighten($dark, 20%);
+	background: $black;
 	transition: all .4s ease;
 	&:hover {
 		border-color: $white;
 	}
 	&:focus {
-		background: lighten($dark, 10%);
+		background: $black;
 		color: $white;
 		width: 100%;
 	}

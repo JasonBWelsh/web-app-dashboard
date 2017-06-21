@@ -13,7 +13,7 @@
 	padding: .1em .5em;
 	margin-top: .7em;
 	color: $white;
-	background: lighten($dark, 20%);
+	background: $black;
 	&:hover {
 		color: $light-blue;
 		border-color: $light-blue;

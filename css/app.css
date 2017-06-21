@@ -465,7 +465,7 @@ template {
   border: 1px solid #42d4f4;
   margin: 0 auto;
   width: 90%;
-  background: #222;
+  background: #000;
   color: #fff;
   border-radius: 8px;
   display: none;
@@ -499,7 +499,7 @@ template {
     justify-content: space-between;
     margin: .5em 0;
     padding: .1em .5em;
-    background: rgba(255, 255, 255, 0.3);
+    background: #222;
     border-radius: calc(8px - 2px); }
 
 .add-list-div {
@@ -508,7 +508,7 @@ template {
   align-items: center;
   flex-direction: column;
   border-radius: 8px;
-  background: #555555;
+  /* background: lighten($dark, 20%); */
   margin-bottom: 1em;
   padding: .5em; }
 
@@ -518,12 +518,12 @@ template {
   padding: .5em;
   border-radius: 8px;
   width: 60%;
-  background: #555555;
+  background: #000;
   transition: all .4s ease; }
   .item-text-box:hover {
     border-color: #fff; }
   .item-text-box:focus {
-    background: #3c3c3c;
+    background: #000;
     color: #fff;
     width: 100%; }
 
@@ -960,7 +960,7 @@ canvas {
   padding: .1em .5em;
   margin-top: .7em;
   color: #fff;
-  background: #555555; }
+  background: #000; }
   .add-notification-btn:hover {
     color: #72dff7;
     border-color: #72dff7; }
