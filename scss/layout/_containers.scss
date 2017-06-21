@@ -238,14 +238,14 @@
 	color: $white;
 	transition: all .4s ease;
 	@media (min-width: $break-m) {
-		width: 25%;
+		width: 20%;
 		/* border: none; */
 	}
 	&:focus {
 		background-color: $dark;
 		color: $white;
 		@media (min-width: $break-m) {
-			width: 40%;
+			width: 30%;
 		}
 	}
 }
@@ -258,7 +258,7 @@
 	position: absolute;
 	top: 20vh;
 	background: $dark;
-	color: $white;
+	color: $yellow;
 	border-radius: $br;
 	border: 1px solid $white;
 	margin: .5em auto;
@@ -462,6 +462,58 @@
 	@include flexCenter;
 	@include flexColumn;
 }
+
+
+//==
+// New Members and Recent Activity sections
+// ==
+
+.new-members-list li {
+	@include flexy;
+	@include flexJustifyContent(#{space-between});
+	margin-top: .5em;
+	margin-bottom: .5em;
+	padding: .5em;
+	color: $light-blue;
+	h3 {
+		margin: 0;
+	}
+	a {
+		color: $yellow;
+		transition: all .4s ease;
+		&:hover {
+			color: $light-purple;
+		}
+	}
+	&:hover .member-icon {
+		transform: scale(1.2) rotate(-15deg);
+	}
+}
+
+.member-info,
+.member-data {
+	@include flexy;
+	@include flexJustifyContent(#{space-between});
+}
+
+.member-info {
+	width: 90%;
+	padding-bottom: .5em;
+	border-bottom: 1px solid $light-blue;
+}
+
+.member-data {
+	@include flexColumn;
+}
+
+.member-icon {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	margin-right: 1em;
+	transition: all .4s ease;
+}
+
 
 //troubleshoot Chart
 
