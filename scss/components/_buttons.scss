@@ -21,8 +21,8 @@
 }
 
 .alert-close-btn {
-	@include mainBorder($white);
-	background: $aqua-blue;/* $color-selected; */
+	/* @include mainBorder($white); */
+	background: $light-purple;/* $color-selected; */
 	transition: all .4s ease;
 	&:hover {
 		background: darken($light-blue/* $color-selected */, 20%);

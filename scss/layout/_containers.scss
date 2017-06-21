@@ -253,7 +253,7 @@
 
 // main alert
 .main-alert{
-	@include b-shadow;
+	/* @include b-shadow; */
 	position: relative; // for .remove-btn
 	position: absolute;
 	top: 20vh;
@@ -272,7 +272,9 @@
 		width: 50%;
 		padding: 1em;
 		right: 30%;
-		top: 40vh;
+		top: -4px;
+		max-height: 73px;
+		border: none;
 	}
 	h3 {
 		font-weight: bold;
@@ -284,6 +286,8 @@
 		@media (min-width: $break-m) {
 			display: inline-block;
 			margin-right: 1%;
+			margin-top: 0;
+			margin-bottom: 0;
 		}
 	}
 	.remove-btn {

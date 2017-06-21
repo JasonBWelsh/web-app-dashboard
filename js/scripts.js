@@ -93,7 +93,7 @@ const mobileUsers = document.getElementById('mobile-users');
 
 Chart.defaults.global.animation.onComplete = () => {
 	mainAlert.style.opacity = '0.9';
-	mainAlert.style.backgroundColor = "#000000";
+	mainAlert.style.backgroundColor = "#222222";
 }
 
 
@@ -202,7 +202,7 @@ let dailyChart = new Chart(dailyTraffic, {
 let weeklyChart = new Chart(weeklyTraffic, {
 	type: 'line',
 	data: {
-		labels: ['1-7', '8-14', '15-22', '23 + '],
+		labels: ['1', '2', '3', '4', '5', '6', '7'],
 		datasets: [
 			{
 				label: "Weekly Traffic",
@@ -222,7 +222,7 @@ let weeklyChart = new Chart(weeklyTraffic, {
 				pointHoverBorderWidth: 2,
 				pointRadius: 7,
 				pointHitRadius: 10,
-				data: [153,175,164,186]
+				data: [153,175,164,186, 178, 185, 190]
 			}
 		]
 	},
@@ -344,7 +344,7 @@ let barDailyChart = new Chart(barDailyTraffic, {
 		labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
 		datasets: [
 			{
-				label: "Weekly Traffic",
+				label: "Daily Traffic",
 				fill: true,
 				lineTension: 0.5,
 				backgroundColor: "#e8ff1e", //$yellow
