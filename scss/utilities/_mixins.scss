@@ -72,6 +72,7 @@
 @mixin f-button($background, $color) {
 	background: $background;
 	color: $color;
+	font-weight: bold;
 	text-align: center;
 	padding: .625em 1.25em;
 	border: none;

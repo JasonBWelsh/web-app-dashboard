@@ -4,7 +4,9 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
       <link href="css/normalize.css" rel="stylesheet" type="text/css">
+      
       <link href="css/app.css" rel="stylesheet" type="text/css">
+      <link href="css-toggle-switch-master/dist/toggle-switch.css" rel="stylesheet" type="text/css">
       <title>Your App</title>
   </head>
   <body>
@@ -32,7 +34,7 @@
                 </g>
               </g>
               </svg> 
-              <span class="bell-indicator"></span>
+              <span class="bell-indicator">3</span>
             </a>
           </li>
 
@@ -277,6 +279,59 @@
 
           <section class="widget settings">
             <h3>Settings</h3>
+            <div class="settings-options-container">
+              
+              <span>Off</span>
+              <span> / </span>
+              <span>On</span>
+              <label class="switch-light switch-material" onclick="">
+                <input type="checkbox">
+
+                <strong>
+                  Send Email Notifications
+                </strong>
+
+                <span>
+                  <span>Off</span>
+                  <span>On</span>
+                  <a></a>
+                </span>
+              </label>
+            </div>
+            <div class="settings-options-container">
+              
+              <label class="switch-light switch-material" onclick="">
+                <input type="checkbox">
+
+                <strong>
+                  Set Profile to Public
+                </strong>
+
+                <span>
+                  <span>Off</span>
+                  <span>On</span>
+                  <a></a>
+                </span>
+              </label>
+            </div>
+
+            <div class="settings-options-container">
+              
+              <label class="switch-light switch-holo" onclick="">
+                <input type="checkbox">
+
+                <strong>
+                  Show Online Status
+                </strong>
+
+                <span>
+                  <span>Off</span>
+                  <span>On</span>
+                  <a></a>
+                </span>
+              </label>
+            </div>
+
           </section>
 
         </main>

@@ -969,6 +969,7 @@ template {
 .message-user button {
   background: #a111af;
   color: #000;
+  font-weight: bold;
   text-align: center;
   padding: .625em 1.25em;
   border: none;
@@ -1022,7 +1023,10 @@ canvas {
   .header-list li {
     padding: .5em 1em; }
   .header-list li:first-child {
-    margin-right: auto;
+    margin-right: .5em;
+    padding: .4em;
+    height: 50px;
+    width: 50px;
     position: relative; }
   .header-list li:last-child {
     border-left: 1px solid #fff; }
@@ -1038,13 +1042,17 @@ canvas {
   height: 100%; }
 
 .bell-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 0;
-  right: 16px;
-  width: 9px;
-  height: 9px;
+  right: 0;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
-  background: #a111af; }
+  background: #a111af;
+  font-size: .8em; }
 
 .profile-div p {
   margin: 0;

@@ -44,7 +44,10 @@
 	} 
 
 	li:first-child {
-		margin-right: auto;
+		margin-right: .5em;
+		padding: .4em;
+		height: 50px;
+		width: 50px;
 		position: relative; // for bell indicator
 	}
 
@@ -71,11 +74,13 @@
 }
 
 .bell-indicator {
+	@include flexCenter;
 	position: absolute;
 	top: 0;
-	right: 16px;
-	@include roundy(9px);
+	right: 0;
+	@include roundy(15px);
 	background: $light-purple;
+	font-size: .8em;
 }
 
 .profile-div {
