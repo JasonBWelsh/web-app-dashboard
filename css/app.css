@@ -912,6 +912,24 @@ template {
   margin-right: 1em;
   transition: all .4s ease; }
 
+@media (min-width: 768px) {
+  .message-user,
+  .settings {
+    height: 440px; } }
+
+.mesage-user,
+.message-user form,
+.settings,
+.settings-options-container {
+  display: flex;
+  flex-direction: column; }
+
+.message-user form {
+  height: 100%; }
+
+.message-user legend {
+  margin-bottom: 1em; }
+
 .message-user fieldset {
   display: flex;
   justify-content: center;
@@ -926,7 +944,8 @@ template {
   display: none; }
 
 .message-user input,
-.message-user textarea {
+.message-user textarea,
+.settings select {
   width: 100%;
   outline: none;
   border: 1px solid #000;
@@ -966,7 +985,8 @@ template {
   /* Firefox 18- */
   color: #a111af; }
 
-.message-user button {
+.message-user button,
+.settings button {
   background: #a111af;
   color: #000;
   font-weight: bold;
@@ -975,9 +995,49 @@ template {
   border: none;
   border-radius: 8px;
   transition: all .4s ease;
-  width: 100%; }
-  .message-user button:hover {
+  width: 100%;
+  margin-top: auto; }
+  .message-user button:hover,
+  .settings button:hover {
     background: #72dff7; }
+
+.settings h4 {
+  margin-top: 0;
+  margin-bottom: .5em;
+  color: #72dff7; }
+
+.toggle-wrap {
+  margin-top: .5em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #72dff7;
+  color: #a111af; }
+  .toggle-wrap span {
+    margin-bottom: 1em; }
+
+.settings strong {
+  margin-bottom: .5em; }
+
+.timezone-label {
+  display: none; }
+
+.settings-button-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto; }
+  .settings-button-wrap button + button {
+    background: #72dff7;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    padding: .625em 1.25em;
+    border: none;
+    border-radius: 8px;
+    transition: all .4s ease; }
+    .settings-button-wrap button + button:hover {
+      background: #a111af; }
+
+.settings button {
+  width: 45%; }
 
 canvas {
   max-height: 450px; }

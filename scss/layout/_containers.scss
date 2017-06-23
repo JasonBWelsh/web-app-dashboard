@@ -541,6 +541,30 @@
 // Message User and Settings sections
 // ==
 
+.message-user,
+.settings {
+	@media(min-width: $break-m) {
+		height: 440px;
+	}
+}
+
+.mesage-user,
+.message-user form,
+.settings,
+.settings-options-container {
+	@include flexy;
+	@include flexColumn;
+}
+
+
+.message-user form {
+	height: 100%;
+}
+
+.message-user legend {
+	margin-bottom: 1em;
+}
+
 .message-user fieldset {
 	@include flexCenter;
 	@include flexColumn;
@@ -555,7 +579,8 @@
 }
 
 .message-user input,
-.message-user textarea, {
+.message-user textarea,
+.settings select {
 	width: 100%;
 	outline: none;
 	border: 1px solid $black;
@@ -596,14 +621,55 @@
   color: $light-purple;
 }
 
-.message-user button {
+.message-user button,
+.settings button {
 	@include f-button($light-purple, $black);
 	width: 100%;
+	margin-top: auto;
 	&:hover {
 		background: $light-blue;
 	}
 }
 
+.settings h4 {
+	margin-top: 0;
+	margin-bottom: .5em;
+	color: $light-blue;
+}
+
+.toggle-wrap {
+	margin-top: .5em;
+	margin-bottom: 1em;
+	border-bottom: 1px solid $light-blue;
+	color: $light-purple;
+	span {
+		margin-bottom: 1em;
+	}
+}
+
+.settings strong {
+	margin-bottom: .5em;
+}
+
+.timezone-label {
+	display: none;
+}
+
+.settings-button-wrap {
+	@include flexy;
+	@include flexJustifyContent(#{space-between});
+	margin-top: auto;
+	button + button {
+		@include f-button($light-blue, $black);
+		&:hover {
+		background: $light-purple;
+		}
+	}
+}
+
+.settings button {
+	width: 45%;
+}
 
 
 
