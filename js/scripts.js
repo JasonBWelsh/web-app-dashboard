@@ -421,3 +421,59 @@ let mobileUsersChart = new Chart(mobileUsers, {
 		}
 	}
 });
+
+// ===========
+// Message User form Functionality 
+// ===========
+
+const users = [
+	'Arwen Welsh',
+	'Moya Welsh',
+	'Athena Welsh',
+	'Jazmin Welsh',
+	'Lily Welsh',
+	'Odo Stiles',
+	'Rus the Cat',
+	'Harlo the Dog',
+	'Jessie the Dog',
+	'Pilot the Dog',
+	'John Crichton',
+	'Aeryn Sun',
+	'Ka D\'Argo',
+	'Pilot',
+	'Dominar Rygel XVI',
+	'Chiana',
+	'Zaan',
+	'Harvey',
+	'Scorpius',
+	'Sikozu'
+];
+const userSearchInput = document.getElementById('user-search');
+const autocomplete = document.getElementById('search-autocomplete');
+const userMessageBox = document.getElementById('message-user-box');
+const autocompleteList = document.querySelector('.autocomplete-list');
+
+//Check if search query is in users array and display matches in autocomplete field
+userSearchInput.addEventListener('keyup', (e) => { 
+	const input = e.target;
+	let search = input.value.toLowerCase();
+	for (let i = 0; i < users.length; i += 1) {
+		if (users[i].toLowerCase().includes(search)) { // if user list contains search, add names to user list 
+			let name = users[i];
+			let li = document.createElement('li');
+			li.textContent = name;
+			li.classList.add('member-name');
+			autocompleteList.appendChild(li);	
+		} else {
+			autocompleteList.removeChild(li);
+		}
+		let items = autocompleteList.children;
+		/*for (let i=0; i < items.length; i +=1) {
+			let curName = items[i];
+			if (items.indexOf(search) === -1) {
+				autocompleteList.removeChild(curName);
+			}
+		}*/
+		console.log(items);
+	}
+});

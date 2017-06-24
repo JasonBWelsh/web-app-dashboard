@@ -216,7 +216,7 @@
 	@media (min-width: $break-l) {
 		@include flexCenter;
 		padding: 1em;
-		background: dark;
+		background: $dark;
 		/* background: linear-gradient(to right, $dark, $light-blue); */
 		border-radius: $br;
 		border: 1px solid $light-blue;
@@ -471,8 +471,7 @@
 	font-size: .8rem;
 }
 
-.new-members-list li,
-.recent-activity-list li {
+.new-members-list li {
 	@include flexy;
 	@include flexJustifyContent(#{space-between});
 	margin-top: .5em;
@@ -669,7 +668,24 @@
 	width: 45%;
 }
 
+// autocomplete list
 
+
+.search-autocomplete {
+	background: $black;
+	max-height: 110px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	color: $yellow;
+	width: 50%;
+	/* border-radius: $br; */
+}
+
+.member-name {  //autocomplete span
+	padding: .5em;
+	font-size: .8rem;
+	border: 1px solid $light-purple;
+}
 
 //troubleshoot Chart
 

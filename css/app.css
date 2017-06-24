@@ -640,7 +640,7 @@ template {
     justify-content: center;
     align-items: center;
     padding: 1em;
-    background: dark;
+    background: #222;
     /* background: linear-gradient(to right, $dark, $light-blue); */
     border-radius: 8px;
     border: 1px solid #72dff7;
@@ -852,26 +852,21 @@ template {
 .recent-activity {
   font-size: .8rem; }
 
-.new-members-list li,
-.recent-activity-list li {
+.new-members-list li {
   display: flex;
   justify-content: space-between;
   margin-top: .5em;
   margin-bottom: .5em;
   padding: .5em;
   color: #72dff7; }
-  .new-members-list li p,
-  .recent-activity-list li p {
+  .new-members-list li p {
     margin: 0; }
-  .new-members-list li a,
-  .recent-activity-list li a {
+  .new-members-list li a {
     color: #e8ff1e;
     transition: all .4s ease; }
-    .new-members-list li a:hover,
-    .recent-activity-list li a:hover {
+    .new-members-list li a:hover {
       color: #a111af; }
-  .new-members-list li:hover .member-icon,
-  .recent-activity-list li:hover .member-icon {
+  .new-members-list li:hover .member-icon {
     transform: scale(1.2) rotate(-15deg); }
 
 .member-info,
@@ -1036,6 +1031,20 @@ template {
 
 .settings button {
   width: 45%; }
+
+.search-autocomplete {
+  background: #000;
+  max-height: 110px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  color: #e8ff1e;
+  width: 50%;
+  /* border-radius: $br; */ }
+
+.member-name {
+  padding: .5em;
+  font-size: .8rem;
+  border: 1px solid #a111af; }
 
 canvas {
   max-height: 450px; }
