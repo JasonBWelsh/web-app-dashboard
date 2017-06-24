@@ -13,8 +13,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	@media (min-width: $break-m) {
-		/* padding-left: 0; */
+	@media (min-width: $break-l) {
 		padding-right: 0;
 		flex-direction: row;
 		justify-content: space-between;
@@ -31,7 +30,7 @@
 	&-span {
 		font-weight: 100;
 	}
-	@media (min-width: $break-m) {
+	@media (min-width: $break-l) {
 		margin-bottom: 0;
 	}
 }
@@ -58,7 +57,7 @@
 			}
 		}
 
-	@media (min-width: $break-m) {
+	@media (min-width: $break-l) {
 		li:last-child {
 			border-left: 1px solid $white; //rule for desktop 
 			p {

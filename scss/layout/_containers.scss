@@ -3,7 +3,7 @@
 	position: relative; // for .alert-box
 	height: 100vh;
 	max-width: $max-width;
-	@media (min-width: $break-m) {
+	@media (min-width: $break-l) {
 		padding-right: 64px; //width of nav
 	}
 }
@@ -97,7 +97,7 @@
 
 .flex-wrap {
 	@include flexColumn;
-	@media (min-width: $break-m) {
+	@media (min-width: $break-l) {
 		flex-direction: row;
 		/* max-width: calc(100% - 64px); */ // width of nav
 		/* margin-left: 64px; */
@@ -107,7 +107,7 @@
 // main nav
 .main-nav {
 	background: $dark;	
-	@media (min-width: $break-m) {
+	@media (min-width: $break-l) {
 		/* border: 1px solid $light-blue; */
 		/* background: linear-gradient(to top, $light-blue, $dark-grey); */
 		/* position: fixed;
@@ -129,7 +129,7 @@
 			/* border-bottom: 1px solid $white; */
 		}
 	}
-	@media (min-width: $break-m) {
+	@media (min-width: $break-l) {
 		flex-direction: column;
 	}
 }
@@ -163,7 +163,7 @@
 	content: attr(data-tip);
 	transform: scale(.6) translateY(-50%);
 	transition: all .4s ease/* cubic-bezier(.84, -.18, .31, 1.26) */ .2s;
-	@media (min-width: $break-m) {
+	@media (min-width: $break-l) {
 		left: 100%;
 		bottom: 0;
 		top: 0;
@@ -190,7 +190,7 @@
 	position: relative;
 	background: rgba($dark, .5);
 	color: $white;
-	@media (min-width: $break-m) {
+	@media (min-width: $break-l) {
 		flex-direction: row;
 		flex-wrap: wrap;
 		flex: 1 90%;
@@ -206,14 +206,14 @@
 	@include flexColumn;
 	padding: 0;
 	width: 100%;
-	@media (min-width: $break-m) {
+	@media (min-width: $break-l) {
 		@include flexRow;
 		justify-content: space-between;
 	}
 }
 
 .search-div {
-	@media (min-width: $break-m) {
+	@media (min-width: $break-l) {
 		@include flexCenter;
 		padding: 1em;
 		background: dark;
@@ -237,14 +237,14 @@
 	background-color: $dark;
 	color: $white;
 	transition: all .4s ease;
-	@media (min-width: $break-m) {
+	@media (min-width: $break-l) {
 		width: 20%;
 		/* border: none; */
 	}
 	&:focus {
 		background-color: $dark;
 		color: $white;
-		@media (min-width: $break-m) {
+		@media (min-width: $break-l) {
 			width: 30%;
 		}
 	}
@@ -268,7 +268,7 @@
 	z-index: 1000;
 	opacity: 0;
 	transition: all .7s ease;
-	@media (min-width: $break-m) {
+	@media (min-width: $break-l) {
 		width: 50%;
 		padding: 1em;
 		right: 30%;
@@ -278,12 +278,12 @@
 	}
 	h3 {
 		font-weight: bold;
-		@media (min-width: $break-m) {
+		@media (min-width: $break-l) {
 			display: inline-block;
 		}
 	}
 	p {
-		@media (min-width: $break-m) {
+		@media (min-width: $break-l) {
 			display: inline-block;
 			margin-right: 1%;
 			margin-top: 0;
@@ -324,7 +324,7 @@
 	}
 	h3 {
 		margin-bottom: .5em;
-		@media (min-width: $break-m) {
+		@media (min-width: $break-l) {
 			margin-bottom: 0;
 		}
 	}
@@ -343,7 +343,7 @@
 	@include flexCenter;
 	@include flexColumn;
 	@include flexJustifyContent(#{space-between});
-	@media(min-width: $break-m) {
+	@media(min-width: $break-l) {
 		@include flexRow;
 	}
 }
@@ -353,7 +353,7 @@
 	@include flexJustifyContent(#{space-between});
 	width: 100%;
 	margin-bottom: 2em;
-	@media(min-width: $break-m) {
+	@media(min-width: $break-l) {
 		width: 40%;
 		margin-bottom: 0;
 	}
@@ -380,7 +380,7 @@
 .recent-activity,
 .message-user,
 .settings {
-	@media(min-width: $break-m) {
+	@media(min-width: $break-l) {
 		flex: 1 50%;
 		max-width: 50%;
 		@include mainBorder($color-text-light); 
@@ -393,7 +393,7 @@
 .new-members,
 .message-user,
 .settings {
-	@media(min-width: $break-m) {
+	@media(min-width: $break-l) {
 		border-left: none;
 	}
 }
@@ -401,7 +401,7 @@
 .mobile-users,
 .recent-activity,
 .settings {
-	@media(min-width: $break-m) {
+	@media(min-width: $break-l) {
 		border-right: none;
 	}
 }
@@ -410,7 +410,7 @@
 .recent-activity,
 .message-user,
 .settings {
-	@media(min-width: $break-m) {
+	@media(min-width: $break-l) {
 		border-bottom: none;
 	}
 }
@@ -422,7 +422,7 @@
 	@include flexColumn;
 	@include flexJustifyContent(#{space-between});
 	color: $light-blue;
-	@media(min-width: $break-m) {
+	@media(min-width: $break-l) {
 		@include flexRow;
 	}
 	li {
@@ -437,7 +437,7 @@
 		margin-bottom: 1em;
 		@include flexCenter;
 		justify-content: space-between;
-		@media (min-width: $break-m) {
+		@media (min-width: $break-l) {
 			
 			width: 25%;
 		}	
@@ -452,8 +452,6 @@
 
 .social-icon-wrap,
 .social-stats-wrap {
-	/* height: 50%;
-	width: 100%; */
 	height: auto;
 	width: auto;
 }
@@ -543,7 +541,7 @@
 
 .message-user,
 .settings {
-	@media(min-width: $break-m) {
+	@media(min-width: $break-l) {
 		height: 440px;
 	}
 }
