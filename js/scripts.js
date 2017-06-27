@@ -485,3 +485,9 @@ userSearchInput.addEventListener('keyup', (e) => {
 });
 
 //Enable search field to fill with result of clicking drop down item
+autocomplete.addEventListener('click', (e) => {
+	let item = e.target;
+	let text = item.textContent;
+	userSearchInput.value = text;
+	autocompleteList.innerHTML = "";
+});
