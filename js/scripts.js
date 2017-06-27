@@ -433,7 +433,7 @@ const users = [
 	'Jazmin Welsh',
 	'Lily Welsh',
 	'Odo Stiles',
-	'Rus the Cat',
+	'Rufus the Cat',
 	'Harlo the Dog',
 	'Jessie the Dog',
 	'Pilot the Dog',
@@ -448,10 +448,10 @@ const users = [
 	'Scorpius',
 	'Sikozu'
 ];
-const userSearchInput = document.getElementById('user-search');
-const autocomplete = document.getElementById('search-autocomplete');
-const userMessageBox = document.getElementById('message-user-box');
-const autocompleteList = document.querySelector('.autocomplete-list');
+const userSearchInput = document.getElementById('user-search');  //search input element
+const autocomplete = document.getElementById('search-autocomplete'); //div containing drop down list
+const userMessageBox = document.getElementById('message-user-box'); //text area 
+const autocompleteList = document.querySelector('.autocomplete-list'); // ul containing search queries
 
 //Check if search query is in users array and display matches in autocomplete field
 userSearchInput.addEventListener('keyup', (e) => { 
@@ -464,16 +464,24 @@ userSearchInput.addEventListener('keyup', (e) => {
 			li.textContent = name;
 			li.classList.add('member-name');
 			autocompleteList.appendChild(li);	
+		} 
+
+	}
+	let items = autocompleteList.children;   // check autocompleteList and if value of search is not in the items, remove it
+	let check;
+	for (let i = 0; i < items.length; i += 1) {
+		if (items[i].textContent.includes(search)) {
+			check = true;
 		} else {
-			autocompleteList.removeChild(li);
+			check = false;
 		}
-		let items = autocompleteList.children;
-		/*for (let i=0; i < items.length; i +=1) {
-			let curName = items[i];
-			if (items.indexOf(search) === -1) {
-				autocompleteList.removeChild(curName);
+		if (check === false) {
+			autocompleteList.removeChild(items[i]);
 			}
-		}*/
-		console.log(items);
+	}
+	if (search === "") {     // if search field is blank remove list contents
+		autocompleteList.innerHTML = ""; 
 	}
 });
+
+//Enable search field to fill with result of clicking drop down item

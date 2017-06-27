@@ -1038,7 +1038,6 @@ template {
   overflow-y: scroll;
   overflow-x: hidden;
   color: #e8ff1e;
-  width: 50%;
   /* border-radius: $br; */ }
 
 .member-name {
