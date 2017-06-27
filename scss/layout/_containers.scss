@@ -686,6 +686,20 @@
 	border: 1px solid $light-purple;
 }
 
+.submit-notification {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: $black;
+	padding: 1em;
+	opacity: 0;
+	@include transCust(#{1s});
+}
+
+.appear {
+	opacity: 1;
+}
+
 //troubleshoot Chart
 
 

@@ -67,6 +67,9 @@
 	transition: all .4s ease;
 }
 
+@mixin transCust ($time, $function:ease) {
+	transition: all $time $function;
+}
 // Form Buttons
 
 @mixin f-button($background, $color) {

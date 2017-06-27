@@ -452,6 +452,8 @@ const userSearchInput = document.getElementById('user-search');  //search input 
 const autocomplete = document.getElementById('search-autocomplete'); //div containing drop down list
 const userMessageBox = document.getElementById('message-user-box'); //text area 
 const autocompleteList = document.querySelector('.autocomplete-list'); // ul containing search queries
+const submitButton = document.getElementById('submit-btn');
+const submitNotification = document.querySelector('.submit-notification');
 
 //Check if search query is in users array and display matches in autocomplete field
 userSearchInput.addEventListener('keyup', (e) => { 
@@ -465,7 +467,6 @@ userSearchInput.addEventListener('keyup', (e) => {
 			li.classList.add('member-name');
 			autocompleteList.appendChild(li);	
 		} 
-
 	}
 	let items = autocompleteList.children;   // check autocompleteList and if value of search is not in the items, remove it
 	let check;
@@ -491,3 +492,28 @@ autocomplete.addEventListener('click', (e) => {
 	userSearchInput.value = text;
 	autocompleteList.innerHTML = "";
 });
+
+//When submit button is clicked, display message if user or message is not filled, or notify if message is sent 
+submitButton.addEventListener('click', (e) => {
+	e.preventDefault();
+	submitNotification.classList.add('appear');
+	removeTimeout();
+	if (userSearchInput.value === "") {
+		submitNotification.textContent = "Please select a user";
+	} else if (userMessageBox.value === "") {
+		let name = userSearchInput.value;
+		submitNotification.textContent = "Please type a message for " + name;
+	} else {
+		submitNotification.textContent = "Your message has been sent";
+		userSearchInput.value = "";
+		userMessageBox.value = "";
+	}
+
+});
+
+function removeAppear() {
+	submitNotification.classList.remove('appear');
+}
+function removeTimeout() {
+	window.setTimeout(removeAppear, 3000);
+}
