@@ -423,7 +423,7 @@ let mobileUsersChart = new Chart(mobileUsers, {
 });
 
 // ===========
-// Message User form Functionality 
+// Message User form Functionality and Settings Buttons
 // ===========
 
 const users = [
@@ -454,6 +454,8 @@ const userMessageBox = document.getElementById('message-user-box'); //text area
 const autocompleteList = document.querySelector('.autocomplete-list'); // ul containing search queries
 const submitButton = document.getElementById('submit-btn');
 const submitNotification = document.querySelector('.submit-notification');
+const settingsButtonWrap = document.querySelector('.settings-button-wrap');
+const settingsNotification = document.querySelector('.settings-notification');
 
 //Check if search query is in users array and display matches in autocomplete field
 userSearchInput.addEventListener('keyup', (e) => { 
@@ -513,7 +515,16 @@ submitButton.addEventListener('click', (e) => {
 
 function removeAppear() {
 	submitNotification.classList.remove('appear');
+	settingsNotification.classList.remove('appear');
 }
 function removeTimeout() {
 	window.setTimeout(removeAppear, 3000);
 }
+
+//Display alert when Settings section buttons are pressed
+settingsButtonWrap.addEventListener('click', (e) => {
+	if (e.target.tagName === 'BUTTON') {
+		removeTimeout();
+		settingsNotification.classList.add('appear');
+	}
+});

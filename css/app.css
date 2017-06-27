@@ -1045,7 +1045,8 @@ template {
   font-size: .8rem;
   border: 1px solid #a111af; }
 
-.submit-notification {
+.submit-notification,
+.settings-notification {
   position: absolute;
   top: 0;
   right: 0;
