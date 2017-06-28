@@ -9,6 +9,14 @@ const mainAlert = document.querySelector('.main-alert');
 const trafficSection = document.querySelector('section.traffic');
 const trafficList = document.querySelector('.traffic-list');
 
+displayNotificationNumber();
+
+//Store number of notifications 
+function displayNotificationNumber() {
+	let notificationNumber = alertUL.children.length;
+	indicator.textContent = notificationNumber;
+}
+
 
 function toggleAlertBox() {
 	if (alertBox.style.display === 'inline-block') {
@@ -20,8 +28,8 @@ function toggleAlertBox() {
 
 function checkNotificationIcon() {
 	if (bellLI.classList.contains('notifications-ready')) {
-		bellLI.classList.remove('notifications-ready');
-		indicator.style.display = 'none';
+		/*bellLI.classList.remove('notifications-ready');*/
+		/*indicator.style.display = 'none';*/
 	} else {
 		bellLI.classList.add('notifications-ready');
 	}
@@ -55,6 +63,7 @@ bellLI.addEventListener('click', (e) => {
 // click close button to close alert
 alertCloseBtn.addEventListener('click', () => {  
 	alertBox.style.display = 'none';
+	displayNotificationNumber();
 });
 
 
@@ -93,7 +102,7 @@ const mobileUsers = document.getElementById('mobile-users');
 
 Chart.defaults.global.animation.onComplete = () => {
 	mainAlert.style.opacity = '0.9';
-	mainAlert.style.backgroundColor = "#222222";
+	mainAlert.style.backgroundColor = "#000000";
 }
 
 
@@ -120,7 +129,7 @@ let hourlyChart = new Chart(hourlyTraffic, {
 				pointHoverBorderWidth: 2,
 				pointRadius: 7,
 				pointHitRadius: 10,
-				data: [12,23,35,19]
+				data: [12,23,32,19]
 			}
 		]
 	},
@@ -141,7 +150,10 @@ let hourlyChart = new Chart(hourlyTraffic, {
           			display: false
         		}
 			}]
-		}
+		},
+		legend: {
+            display: false
+         }
 	}
 });
 
@@ -192,7 +204,10 @@ let dailyChart = new Chart(dailyTraffic, {
           			display: false
         		}
 			}]
-		}
+		},
+		legend: {
+            display: false
+         }
 	}
 });
 
@@ -222,7 +237,7 @@ let weeklyChart = new Chart(weeklyTraffic, {
 				pointHoverBorderWidth: 2,
 				pointRadius: 7,
 				pointHitRadius: 10,
-				data: [153,175,164,186, 178, 185, 190]
+				data: [153,175,164,186, 178, 181, 186]
 			}
 		]
 	},
@@ -243,7 +258,10 @@ let weeklyChart = new Chart(weeklyTraffic, {
           			display: false
         		}
 			}]
-		}
+		},
+		legend: {
+            display: false
+         }
 	}
 });
 
@@ -291,7 +309,10 @@ let monthlyChart = new Chart(monthlyTraffic, {
           			display: false
         		}
 			}]
-		}
+		},
+		legend: {
+            display: false
+         }
 	}
 });
 
@@ -382,7 +403,10 @@ let barDailyChart = new Chart(barDailyTraffic, {
           			display: false
         		}
 			}]
-		}
+		},
+		legend: {
+            display: false
+         }
 	}
 });
 
@@ -418,6 +442,9 @@ let mobileUsersChart = new Chart(mobileUsers, {
 		cutoutPercentage: 20,
 		animation: {
 			animationScale: true
+		},
+		legend: {
+			position: 'right'
 		}
 	}
 });

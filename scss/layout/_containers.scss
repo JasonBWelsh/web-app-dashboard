@@ -256,9 +256,11 @@
 	/* @include b-shadow; */
 	position: relative; // for .remove-btn
 	position: absolute;
-	top: 20vh;
-	background: $dark;
-	color: $yellow;
+	top: 10vh;
+	background: $black;
+	color: $white;
+	/* font-size: .9rem; */
+	/* letter-spacing: 0.1em; */
 	border-radius: $br;
 	border: 1px solid $white;
 	margin: .5em auto;
@@ -269,12 +271,10 @@
 	opacity: 0;
 	transition: all .7s ease;
 	@media (min-width: $break-l) {
-		width: 50%;
 		padding: 1em;
-		right: 30%;
-		top: -4px;
-		max-height: 73px;
-		border: none;
+		top: -7px;
+		left: 164px;
+		width: auto;
 	}
 	h3 {
 		font-weight: bold;
@@ -343,6 +343,10 @@
 	@include flexCenter;
 	@include flexColumn;
 	@include flexJustifyContent(#{space-between});
+	@media(min-width: $break-m) {
+		padding-bottom: .5em;
+		overflow: visible;
+	}
 	@media(min-width: $break-l) {
 		@include flexRow;
 	}
@@ -422,24 +426,25 @@
 	@include flexColumn;
 	@include flexJustifyContent(#{space-between});
 	color: $light-blue;
-	@media(min-width: $break-l) {
+	@media(min-width: $break-m) {
 		@include flexRow;
 	}
 	li {
 		border: 1px solid $light-blue;
 		border-radius: $br;
-		height: 50%;
+		height: 30%;
 		width: 100%;
 		padding: 1em;
 		background: $black;
-		font-size: 1.5em;
+		
 		margin-top: 1em;
 		margin-bottom: 1em;
 		@include flexCenter;
 		justify-content: space-between;
 		@media (min-width: $break-l) {
-			
+			font-size: 1.3em;
 			width: 25%;
+			height: 40%;
 		}	
 	}
 	p {
@@ -680,10 +685,14 @@
 	/* border-radius: $br; */
 }
 
-.member-name {  //autocomplete span
+.member-name {  //autocomplete items
 	padding: .5em;
 	font-size: .8rem;
 	border: 1px solid $light-purple;
+	@include transStd;
+	&:hover {
+		background: $dark;
+	}
 }
 
 .submit-notification,

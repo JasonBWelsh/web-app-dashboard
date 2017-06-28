@@ -6,17 +6,16 @@
 
 
 .main-header {
+	@include flexColumn;
+	@include flexCenter;
 	background: $dark;
 	color: $white;
 	width: 100%; // of .container div
 	padding: 1em;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 	@media (min-width: $break-l) {
 		padding-right: 0;
-		flex-direction: row;
-		justify-content: space-between;
+		@include flexRow;
+		@include flexJustifyContent(#{space-between});
 	}
 }
 
@@ -27,6 +26,10 @@
 	font-weight: normal;
 	font-size: 2rem;
 	color: $light-blue;
+	@include transStd;
+	&:hover {
+		color: $light-purple;
+	}
 	&-span {
 		font-weight: 100;
 	}
@@ -51,7 +54,7 @@
 	}
 
 	li:last-child {
-			border-left: 1px solid $white; //rule for desktop 
+			border-left: 1px solid $light-blue; //rule for desktop 
 			p {
 				display: none;
 			}
@@ -59,7 +62,7 @@
 
 	@media (min-width: $break-l) {
 		li:last-child {
-			border-left: 1px solid $white; //rule for desktop 
+			border-left: 1px solid $light-blue; //rule for desktop 
 			p {
 				display: inline-block;
 			}
@@ -100,7 +103,7 @@
 
 .header-link p {
 	border-radius: $br;
-	transition: all .4s ease;
+	@include transStd;
 }
 
 .header-link:hover,
@@ -112,10 +115,10 @@
 }
 
 .bell {
-	transition: all .4s ease;
+	@include transStd;
 }
 
 .bell:hover,
 .bell:focus {
-	transform: scale(1.2);/* rotateY(-180deg) */;
+	transform: scale(1.2);
 }
