@@ -108,12 +108,8 @@
 .main-nav {
 	background: $dark;	
 	@media (min-width: $break-l) {
-		/* border: 1px solid $light-blue; */
-		/* background: linear-gradient(to top, $light-blue, $dark-grey); */
-		/* position: fixed;
-		top: 82px;
-		left: 0;
-		z-index: 100; */
+		height: 100vh;
+		width: 64px;
 	}
 }
 
@@ -131,6 +127,10 @@
 	}
 	@media (min-width: $break-l) {
 		flex-direction: column;
+		position: fixed;
+		top: 82px;
+		left: 0;
+		z-index: 1001;
 	}
 }
 

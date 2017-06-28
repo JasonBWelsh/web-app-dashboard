@@ -50,6 +50,7 @@ function addNotification(e) {
 		li.appendChild(rmvBtn);
 		alertUL.appendChild(li);
 		input.value = "";
+		displayNotificationNumber();
 	}
 }
 

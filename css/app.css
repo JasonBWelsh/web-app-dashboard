@@ -544,12 +544,8 @@ template {
   background: #222; }
   @media (min-width: 992px) {
     .main-nav {
-      /* border: 1px solid $light-blue; */
-      /* background: linear-gradient(to top, $light-blue, $dark-grey); */
-      /* position: fixed;
-      top: 82px;
-      left: 0;
-      z-index: 100; */ } }
+      height: 100vh;
+      width: 64px; } }
 
 .nav-list {
   justify-content: space-around; }
@@ -565,7 +561,11 @@ template {
       /* border-bottom: 1px solid $white; */ }
   @media (min-width: 992px) {
     .nav-list {
-      flex-direction: column; } }
+      flex-direction: column;
+      position: fixed;
+      top: 82px;
+      left: 0;
+      z-index: 1001; } }
 
 .main-nav-selected {
   background: #a111af;
