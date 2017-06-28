@@ -74,6 +74,7 @@ alertUL.addEventListener('click', (e) => {
 		let btn = e.target;
 		let li = btn.parentNode;
 		alertUL.removeChild(li);
+		displayNotificationNumber();
 	}
 });
 
