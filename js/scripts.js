@@ -102,6 +102,8 @@ const monthlyTraffic = document.getElementById('monthly-traffic');
 const barDailyTraffic = document.getElementById('bar-daily-traffic');
 const mobileUsers = document.getElementById('mobile-users');
 
+Chart.defaults.global.defaultFontColor = '#FFFFFF';
+
 Chart.defaults.global.animation.onComplete = () => {
 	mainAlert.style.opacity = '0.9';
 	mainAlert.style.backgroundColor = "#000000";

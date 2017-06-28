@@ -20,7 +20,7 @@ body {
   font-size: 100%;
   /* font-weight: lighter; */
   line-height: 1.5;
-  background: #222;
+  background: #122234;
   color: #fff; }
 
 h1 {
@@ -500,7 +500,7 @@ template {
     justify-content: space-between;
     margin: .5em 0;
     padding: .1em .5em;
-    background: #222;
+    background: #122234;
     border-radius: calc(8px - 2px); }
 
 .add-list-div {
@@ -541,7 +541,7 @@ template {
       /* margin-left: 64px; */ } }
 
 .main-nav {
-  background: #222; }
+  background: #122234; }
   @media (min-width: 992px) {
     .main-nav {
       height: 100vh;
@@ -612,7 +612,7 @@ template {
   flex-direction: column;
   align-items: center;
   position: relative;
-  background: rgba(34, 34, 34, 0.5);
+  background: rgba(18, 34, 52, 0.5);
   color: #fff; }
   @media (min-width: 992px) {
     .main {
@@ -640,7 +640,7 @@ template {
     justify-content: center;
     align-items: center;
     padding: 1em;
-    background: #222;
+    background: #122234;
     /* background: linear-gradient(to right, $dark, $light-blue); */
     border-radius: 8px;
     border: 1px solid #72dff7;
@@ -655,7 +655,7 @@ template {
   background: url(../icons/magnifying-glass.svg) no-repeat;
   background-position: 95% 50%;
   background-size: 7%;
-  background-color: #222;
+  background-color: #122234;
   color: #fff;
   transition: all .4s ease; }
   @media (min-width: 992px) {
@@ -663,25 +663,25 @@ template {
       width: 20%;
       /* border: none; */ } }
   .search:focus {
-    background-color: #222;
+    background-color: #122234;
     color: #fff; }
     @media (min-width: 992px) {
       .search:focus {
         width: 30%; } }
 
 .main-alert {
-  /* @include b-shadow; */
+  -webkit-box-shadow: 4px 4px 5px 0px #323232;
+  -moz-box-shadow: 4px 4px 5px 0px #323232;
+  box-shadow: 4px 4px 5px 0px #323232;
   position: relative;
   position: absolute;
   top: 10vh;
   background: #000;
-  color: #fff;
-  /* font-size: .9rem; */
-  /* letter-spacing: 0.1em; */
+  color: #72dff7;
   border-radius: 8px;
   border: 1px solid #fff;
   margin: .5em auto;
-  padding: .5em;
+  padding: 1em;
   width: 80%;
   max-width: 90%;
   z-index: 1000;
@@ -690,9 +690,11 @@ template {
   @media (min-width: 992px) {
     .main-alert {
       padding: 1em;
-      top: -7px;
-      left: 164px;
-      width: auto; } }
+      top: -5px;
+      /* left: 164px; */
+      left: 12.5%;
+      width: 40%;
+      line-height: 1.7; } }
   .main-alert h3 {
     font-weight: bold; }
     @media (min-width: 992px) {
@@ -1051,7 +1053,7 @@ template {
   border: 1px solid #a111af;
   transition: all .4s ease; }
   .member-name:hover {
-    background: #222; }
+    background: #122234; }
 
 .submit-notification,
 .settings-notification {
@@ -1083,7 +1085,7 @@ canvas {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #222;
+  background: #122234;
   color: #fff;
   width: 100%;
   padding: 1em; }

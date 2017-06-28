@@ -253,18 +253,16 @@
 
 // main alert
 .main-alert{
-	/* @include b-shadow; */
+	@include b-shadow;
 	position: relative; // for .remove-btn
 	position: absolute;
 	top: 10vh;
 	background: $black;
-	color: $white;
-	/* font-size: .9rem; */
-	/* letter-spacing: 0.1em; */
+	color: $light-blue;
 	border-radius: $br;
 	border: 1px solid $white;
 	margin: .5em auto;
-	padding: .5em;
+	padding: 1em;
 	width: 80%;
 	max-width: 90%;
 	z-index: 1000;
@@ -272,9 +270,11 @@
 	transition: all .7s ease;
 	@media (min-width: $break-l) {
 		padding: 1em;
-		top: -7px;
-		left: 164px;
-		width: auto;
+		top: -5px;
+		/* left: 164px; */
+		left: 12.5%;
+		width: 40%;
+		line-height: 1.7;
 	}
 	h3 {
 		font-weight: bold;
