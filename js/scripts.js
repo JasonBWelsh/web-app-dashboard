@@ -569,7 +569,6 @@ settingsButtonWrap.addEventListener('click', (e) => {
 // Local Storage
 //===========
 
-
 const saveButton = document.getElementById('save-btn');
 const cancelButton = document.getElementById('cancel-btn');
 
@@ -582,6 +581,10 @@ function save() {
 
 	var checkbox3 = document.getElementById('switch-3');
 	localStorage.setItem('switch-3', checkbox3.checked);
+
+	// time zone select box
+	var timeZone = document.getElementById('timeZone');
+	localStorage.setItem('timeZone', timeZone.value);
 }
 
 function load() {
@@ -593,6 +596,11 @@ function load() {
 
 	var checked3 = JSON.parse(localStorage.getItem('switch-3'));
 	document.getElementById('switch-3').checked = checked3;
+
+	// time zone select box
+	var timeZone = JSON.parse(localStorage.getItem('timeZone'));
+	document.getElementById('timeZone').value = timeZone;
+
 }
 
 function wis() {
@@ -613,7 +621,7 @@ load();
 
 // Timezone dropdown
 
-$(function() {
+/*$(function() {
     $('#timeZone').change(function() {
         localStorage.setItem('timeZoneData', this.value);
     });
@@ -621,4 +629,4 @@ $(function() {
         $('#timeZone').val(localStorage.getItem('timeZoneData'));
     }
 });
-
+*/
