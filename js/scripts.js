@@ -554,9 +554,14 @@ function removeTimeout() {
 
 //Display alert when Settings section buttons are pressed
 settingsButtonWrap.addEventListener('click', (e) => {
-	if (e.target.tagName === 'BUTTON') {
+	if (e.target.tagName === 'BUTTON' && e.target.textContent.toLowerCase() === 'save') {
 		removeTimeout();
 		settingsNotification.classList.add('appear');
+		settingsNotification.textContent = "Your settings have been saved";
+	} else if (e.target.tagName === 'BUTTON' && e.target.textContent.toLowerCase() === 'cancel') {
+		removeTimeout();
+		settingsNotification.classList.add('appear');
+		settingsNotification.textContent = "Your settings have been deleted from memory";
 	}
 });
 
@@ -566,6 +571,7 @@ settingsButtonWrap.addEventListener('click', (e) => {
 
 
 const saveButton = document.getElementById('save-btn');
+const cancelButton = document.getElementById('cancel-btn');
 
 function save() {
 	var checkbox1 = document.getElementById('switch-1');
@@ -589,10 +595,18 @@ function load() {
 	document.getElementById('switch-3').checked = checked3;
 }
 
+function wis() {
+    location.reload();
+    localStorage.clear()
 
+}
 
-saveButton.addEventListener('click', () => {
+saveButton.addEventListener('click', () => { //save settings in local storage
 	save();
+});
+
+cancelButton.addEventListener('click', () => { //remove settings from local storage 
+	wis();
 });
 
 load();
