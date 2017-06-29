@@ -294,16 +294,14 @@
 
           <section class="widget settings" id="settings">
             <h3>Settings</h3>
-            <div class="settings-options-container">
+            <div class="settings-options-container" id="savestate"><!-- id for local storage save-->
 
               <div class="toggle-wrap">
               
                 <h4>Off / On</h4>
-                <!-- <span>Off</span>
-                <span> / </span>
-                <span>On</span> -->
+
                 <label class="switch-light switch-material" onclick="">
-                  <input type="checkbox">
+                  <input type="checkbox" class="switch" id="switch-1">
 
                   <strong>
                     Send Email Notifications
@@ -318,7 +316,7 @@
             
                 
                 <label class="switch-light switch-material" onclick="">
-                  <input type="checkbox">
+                  <input type="checkbox" class="switch" id="switch-2">
 
                   <strong>
                     Set Profile to Public
@@ -333,7 +331,7 @@
 
                 
                 <label class="switch-light switch-material" onclick="">
-                  <input type="checkbox">
+                  <input type="checkbox" class="switch" id="switch-3">
 
                   <strong>
                     Show Online Status
@@ -451,6 +449,10 @@
     </div><!--/.container-->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
 
   </body>
