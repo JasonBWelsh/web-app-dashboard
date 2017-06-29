@@ -690,7 +690,7 @@ template {
   @media (min-width: 992px) {
     .main-alert {
       padding: 1em;
-      top: -5px;
+      top: 15vh;
       /* left: 164px; */
       left: 12.5%;
       width: 40%;
@@ -724,13 +724,16 @@ template {
 .widget {
   position: relative;
   padding: 1.5em;
+  padding-left: .5em;
+  padding-right: .5em;
   width: 100%;
-  /* height: auto; */
   border: 1px solid #e5e5ee;
   border-bottom: none; }
   @media (min-width: 768px) {
     .widget {
-      border: none; } }
+      border: none;
+      padding-left: 1.5em;
+      padding-right: 1.5em; } }
   .widget h3 {
     margin-bottom: .5em; }
     @media (min-width: 992px) {
@@ -824,7 +827,7 @@ template {
   .social-stats-list li {
     border: 1px solid #72dff7;
     border-radius: 8px;
-    height: 30%;
+    height: 20%;
     width: 100%;
     padding: 1em;
     background: #000;
@@ -833,6 +836,7 @@ template {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     justify-content: space-between; }
     @media (min-width: 992px) {
       .social-stats-list li {
@@ -844,8 +848,7 @@ template {
   .social-stats-list img {
     height: 110px; }
 
-.social-icon-wrap,
-.social-stats-wrap {
+.social-icon-wrap {
   height: auto;
   width: auto; }
 
@@ -1023,7 +1026,10 @@ template {
 .settings-button-wrap {
   display: flex;
   justify-content: space-between;
-  margin-top: auto; }
+  margin-top: 1em; }
+  @media (min-width: 768px) {
+    .settings-button-wrap {
+      margin-top: auto; } }
   .settings-button-wrap button + button {
     background: #72dff7;
     color: #000;

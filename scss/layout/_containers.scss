@@ -270,7 +270,7 @@
 	transition: all .7s ease;
 	@media (min-width: $break-l) {
 		padding: 1em;
-		top: -5px;
+		top: 15vh;
 		/* left: 164px; */
 		left: 12.5%;
 		width: 40%;
@@ -315,12 +315,15 @@
 .widget {
 	position: relative; // to position iframe and canvas for chart
 	padding: 1.5em;
+	padding-left: .5em;
+	padding-right: .5em;
 	width: 100%;
-	/* height: auto; */
 	@include mainBorder($color-text-light);
 	border-bottom: none;
 	@media(min-width: $break-m) {
 		border: none;
+		padding-left: 1.5em;
+		padding-right: 1.5em;
 	}
 	h3 {
 		margin-bottom: .5em;
@@ -432,7 +435,7 @@
 	li {
 		border: 1px solid $light-blue;
 		border-radius: $br;
-		height: 30%;
+		height: 20%;
 		width: 100%;
 		padding: 1em;
 		background: $black;
@@ -440,6 +443,7 @@
 		margin-top: 1em;
 		margin-bottom: 1em;
 		@include flexCenter;
+		@include flexColumn;
 		justify-content: space-between;
 		@media (min-width: $break-l) {
 			font-size: 1.3em;
@@ -455,8 +459,7 @@
 	}
 }
 
-.social-icon-wrap,
-.social-stats-wrap {
+.social-icon-wrap {
 	height: auto;
 	width: auto;
 }
@@ -660,7 +663,10 @@
 .settings-button-wrap {
 	@include flexy;
 	@include flexJustifyContent(#{space-between});
-	margin-top: auto;
+	margin-top: 1em;
+	@media (min-width: $break-m) {
+		margin-top: auto;
+	}
 	button + button {
 		@include f-button($light-blue, $black);
 		&:hover {
