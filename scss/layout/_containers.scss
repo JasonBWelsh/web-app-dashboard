@@ -252,13 +252,13 @@
 
 
 // main alert
-.main-alert{
+.main-alert{   // appears when charts are loaded. function in charts section global in scripts.js
 	@include b-shadow;
 	position: relative; // for .remove-btn
 	position: absolute;
 	top: 10vh;
 	background: $black;
-	color: $light-blue;
+	color: $white;
 	border-radius: $br;
 	border: 1px solid $white;
 	margin: .5em auto;

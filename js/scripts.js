@@ -104,8 +104,8 @@ const mobileUsers = document.getElementById('mobile-users');
 
 Chart.defaults.global.defaultFontColor = '#FFFFFF';
 
-Chart.defaults.global.animation.onComplete = () => {
-	mainAlert.style.opacity = '0.9';
+Chart.defaults.global.animation.onComplete = () => {  // causes Main Alert to appear after cahrt has loaded
+	mainAlert.style.opacity = '0.8';
 	mainAlert.style.backgroundColor = "#000000";
 }
 
