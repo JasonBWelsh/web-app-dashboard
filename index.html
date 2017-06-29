@@ -267,8 +267,9 @@
 
           <section class="widget message-user">
             <form action="index.html" method="post">
-              <legend>Message User</legend>
+              <!-- <legend>Message User</legend> -->
               <fieldset id="message-user">
+                <legend>Message User</legend>
                 <label for="message-user">Search for User</label>
                 <input type="text" id="user-search" placeholder="Search for User" name="user_search" required>
                 <div id="search-autocomplete" class="search-autocomplete">
@@ -338,7 +339,7 @@
               </div><!--/.toggle-wrap-->
 
               <label for="timeZone" class="timezone-label">Select Time Zone</label>
-              <select id="timeZone" name="user_timeZone" class="dropDown" placeholder="Select Time Zone">
+              <select id="timeZone" name="user_timeZone" class="dropDown">
                 <option value="" disabled selected>Select Time Zone</option>
                 <option timeZoneId="1" gmtAdjustment="GMT-12:00" useDaylightTime="0" value="-12">(GMT-12:00) International Date Line West</option>
                 <option timeZoneId="2" gmtAdjustment="GMT-11:00" useDaylightTime="0" value="-11">(GMT-11:00) Midway Island, Samoa</option>

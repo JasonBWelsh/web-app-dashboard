@@ -599,7 +599,10 @@ function load() {
 
 	// time zone select box
 	var timeZone = JSON.parse(localStorage.getItem('timeZone'));
-	document.getElementById('timeZone').value = timeZone;
+	if (timeZone) {
+		document.getElementById('timeZone').value = timeZone;
+	}
+	
 
 }
 
@@ -617,16 +620,9 @@ cancelButton.addEventListener('click', () => { //remove settings from local stor
 	wis();
 });
 
-load();
 
-// Timezone dropdown
+window.onload = function() {
+	load();
+}
 
-/*$(function() {
-    $('#timeZone').change(function() {
-        localStorage.setItem('timeZoneData', this.value);
-    });
-    if(localStorage.getItem('timeZoneData')){
-        $('#timeZone').val(localStorage.getItem('timeZoneData'));
-    }
-});
-*/
+
