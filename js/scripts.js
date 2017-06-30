@@ -602,14 +602,11 @@ function load() {
 	if (timeZone) {
 		document.getElementById('timeZone').value = timeZone;
 	}
-	
-
 }
 
 function wis() {
     location.reload();
     localStorage.clear()
-
 }
 
 saveButton.addEventListener('click', () => { //save settings in local storage
@@ -620,9 +617,10 @@ cancelButton.addEventListener('click', () => { //remove settings from local stor
 	wis();
 });
 
-
-window.onload = function() {
+/*window.onload = function() {
 	load();
 }
+*/
 
+load();
 

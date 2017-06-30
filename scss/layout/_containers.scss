@@ -125,6 +125,9 @@
 			/* border-bottom: 1px solid $white; */
 		}
 	}
+	@media (min-width: $break-m) {
+		background: $black;
+	}
 	@media (min-width: $break-l) {
 		flex-direction: column;
 		position: fixed;

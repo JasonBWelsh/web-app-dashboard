@@ -559,6 +559,9 @@ template {
     .nav-list li:hover {
       background: #a111af;
       /* border-bottom: 1px solid $white; */ }
+  @media (min-width: 768px) {
+    .nav-list {
+      background: #000; } }
   @media (min-width: 992px) {
     .nav-list {
       flex-direction: column;
