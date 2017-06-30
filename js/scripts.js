@@ -617,10 +617,5 @@ cancelButton.addEventListener('click', () => { //remove settings from local stor
 	wis();
 });
 
-/*window.onload = function() {
-	load();
-}
-*/
-
 load();
 
